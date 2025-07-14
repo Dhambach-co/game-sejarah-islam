@@ -47,7 +47,11 @@ h1 {
 .menu,
 .start-journey,
 .narrative,
-.question {
+.question,
+#frame-arcade,
+#frame-arcade-question,
+#frame-arcade-result,
+#frame-arcade-essay {
   background-image: url('img/bg njay.jpg');
 }
 
@@ -90,7 +94,7 @@ button:hover:enabled {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  min-height: 60px; /* biar stabil */
+  min-height: 60px;
 }
 
 /* ====== MENU BUTTONS ====== */
@@ -187,7 +191,47 @@ button:hover:enabled {
 .start-journey h1,
 .narrative .narration,
 #frame-question .question-text {
-  margin-top: 80px; /* biar tidak ketabrak top-bar */
+  margin-top: 80px;
+}
+
+/* ====== ARCADE STYLES ====== */
+.arcade-mode-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.arcade-score {
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* ====== ESSAY MODE ====== */
+.essay-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.essay-container textarea {
+  width: 100%;
+  min-height: 120px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
 }
 
 /* ====== MOBILE RESPONSIVE ====== */
@@ -218,5 +262,13 @@ button:hover:enabled {
   .choices button {
     font-size: 1rem;
     padding: 12px;
+  }
+
+  .essay-container textarea {
+    font-size: 0.9rem;
+  }
+
+  .arcade-score {
+    font-size: 1.5rem;
   }
 }
