@@ -320,12 +320,8 @@ function startArcadeMode() {
   document.getElementById('frame-arcade').classList.remove('hidden');
 }
 
-function startArcadeQuiz() {
-  arcadeType = 'quiz';
-  arcadeScore = 0;
-  arcadeIndex = 0;
-  arcadeQuestions = arcadeQuestionPool.sort(() => Math.random() - 0.5).slice(0, 10);
-  showArcadeQuestion();
+function startArcadeBenarSalah() {
+  startArcadeQuiz();
 }
 
 function showArcadeQuestion() {
