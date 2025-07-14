@@ -180,10 +180,10 @@
     <div class="coin-display">Skor: <span id="arcade-score">0</span></div>
   </div>
   <p class="question-text top-space" id="arcade-question-text">Pertanyaan akan muncul di sini...</p>
-  <div class="choices">
-    <button onclick="checkArcadeAnswer(true)">BENAR</button>
-    <button onclick="checkArcadeAnswer(false)">SALAH</button>
-  </div>
+<div class="choices">
+  <button id="arcade-btn-true" onclick="checkArcadeAnswer(true)">BENAR</button>
+  <button id="arcade-btn-false" onclick="checkArcadeAnswer(false)">SALAH</button>
+</div>
   <p id="arcade-feedback"></p>
 </div>
 
@@ -202,7 +202,7 @@
     <button onclick="backToArcade()">Kembali</button>
   </div>
   <p id="essay-question-text">Soal essay muncul di sini...</p>
-  <textarea id="essay-answer" rows="4"></textarea>
+ <textarea id="arcade-essay-input" rows="4"></textarea>
   <button onclick="submitEssayAnswer()">SUBMIT</button>
   <p id="essay-feedback"></p>
 </div>
