@@ -226,6 +226,155 @@ function unlockNextRegion() {
   }
 }
 
+let arcadeScore = 0;
+let arcadeQuestions = [];
+let arcadeIndex = 0;
+let arcadeType = 'quiz'; // or 'essay'
+
+const arcadeQuestionPool = [
+  { text: "Kesultanan Langkat memiliki istana yang disebut Istana Tanjung Pura.", correct: true },
+  { text: "Kerajaan Perlak memiliki dua golongan utama, yaitu Syiah dan Sunni.", correct: true },
+  { text: "Kerajaan Aceh Darussalam dikenal sebagai pusat perdagangan dan penyebaran Islam di Asia Tenggara.", correct: true },
+  { text: "Kesultanan Deli terkenal sebagai penghasil emas terbesar di Sumatra.", correct: false, explanation: "Kesultanan Deli terkenal sebagai penghasil tembakau berkualitas tinggi, terutama tembakau deli." },
+  { text: "Sultan Ma'mun Al Rasyid Perkasa Alam merupakan sultan yang memimpin pada masa kejayaan Kesultanan Deli.", correct: true },
+  { text: "Kesultanan Serdang awalnya merupakan bagian dari Kesultanan Deli.", correct: true },
+  { text: "Kesultanan Siak mencapai kejayaan pada masa Sultan Syarif Kasim II.", correct: false, explanation: "Puncak kejayaan terjadi pada masa Sultan Syarif Kasim I, sedangkan Sultan Syarif Kasim II adalah sultan terakhir." },
+  { text: "Kerajaan Perlak adalah kerajaan Islam pertama di Indonesia.", correct: true },
+  { text: "Kesultanan Serdang dikenal sebagai pusat penyebaran agama Kristen di Sumatra Timur.", correct: false, explanation: "Kesultanan Serdang merupakan kerajaan Islam." },
+  { text: "Kesultanan Indragiri sempat menjadi bagian dari pengaruh Kerajaan Majapahit.", correct: true },
+  { text: "Kesultanan Deli tidak pernah menjalin hubungan dengan Belanda.", correct: false, explanation: "Kesultanan Deli menjalin kerja sama dengan Belanda, terutama dalam pengelolaan perkebunan tembakau." },
+  { text: "Sultan Iskandar Muda adalah salah satu raja terbesar dari Kerajaan Aceh Darussalam.", correct: true },
+  { text: "Kerajaan Samudra Pasai hanya berdiri selama 20 tahun.", correct: false, explanation: "Berdiri sekitar abad ke-13 sampai 15 M, lebih dari 100 tahun." },
+  { text: "Kesultanan Siak Sri Indrapura terletak di wilayah Riau, Sumatra.", correct: true },
+  { text: "Kesultanan Langkat berdiri pada abad ke-20.", correct: false, explanation: "Kesultanan Langkat berdiri pada abad ke-19, sekitar tahun 1869." },
+  { text: "Kesultanan Indragiri mulai mengalami kemunduran sejak masuknya pengaruh Belanda.", correct: true },
+  { text: "Bahasa yang digunakan dalam perdagangan di Samudra Pasai adalah bahasa Arab dan Melayu.", correct: true },
+  { text: "Sultan Syarif Kasim II menyumbangkan harta pribadinya untuk kemerdekaan Indonesia.", correct: true },
+  { text: "Kerajaan Aceh Darussalam runtuh pada abad ke-17 karena invasi dari Inggris.", correct: false, explanation: "Kerajaan Aceh mulai melemah pada abad ke-17 karena perpecahan internal dan tekanan dari Belanda, bukan Inggris." },
+  { text: "Pendiri Kesultanan Serdang adalah Sultan Mahmud Perkasa Alam.", correct: false, explanation: "Pendiri Kesultanan Serdang adalah Tuanku Umar Johan Pahlawan, putra dari Sultan Deli." },
+   { text: "Kerajaan Aceh Darussalam mencapai puncak kejayaan pada masa pemerintahan Sultan Iskandar Muda.", correct: true },
+  { text: "Kesultanan Langkat runtuh karena diserang oleh kerajaan dari Jawa.", correct: false, explanation: "Kesultanan Langkat runtuh karena revolusi sosial tahun 1946, bukan karena serangan kerajaan dari Jawa." },
+  { text: "Letak Kerajaan Samudra Pasai berada di pesisir selatan Pulau Jawa.", correct: false, explanation: "Letak sebenarnya adalah di pesisir utara Aceh." },
+  { text: "Kesultanan Indragiri sudah tidak memiliki kekuasaan politik, hanya sebagai warisan budaya dan sejarah.", correct: true },
+  { text: "Sultan pertama Kesultanan Indragiri adalah Raja Merlang Sang Nata Pulang.", correct: true },
+  { text: "Agama resmi Kesultanan Deli adalah Islam.", correct: true },
+  { text: "Bahasa resmi kerajaan Aceh Darussalam adalah bahasa Belanda.", correct: false, explanation: "Bahasa yang digunakan di Kerajaan Aceh adalah bahasa Melayu, bukan Belanda." },
+  { text: "Kesultanan Serdang runtuh setelah kemerdekaan Indonesia.", correct: true },
+  { text: "Kerajaan Samudra Pasai terkenal sebagai pusat perdagangan dan penyebaran Islam.", correct: true },
+  { text: "Kesultanan Siak berdiri sebelum Kerajaan Sriwijaya.", correct: false, explanation: "Kerajaan Sriwijaya berdiri jauh lebih dulu pada abad ke-7, sedangkan Siak berdiri pada abad ke-18." },
+  { text: "Kesultanan Langkat tidak pernah memiliki hubungan dengan Kesultanan Deli.", correct: false, explanation: "Kesultanan Langkat memiliki hubungan kekerabatan dan politik dengan Kesultanan Deli." },
+  { text: "Kerajaan Aceh Darussalam berdiri pada abad ke-13 Masehi.", correct: false, explanation: "Kerajaan Aceh Darussalam berdiri pada abad ke-16 Masehi, sekitar tahun 1511." },
+  { text: "Kerajaan Perlak menjalin hubungan dagang dengan Arab, Persia, dan India.", correct: true },
+  { text: "Sultan pertama Kerajaan Perlak adalah Sultan Malik As-Saleh.", correct: false, explanation: "Sultan pertama Perlak adalah Sultan Alaiddin Syed Maulana Abdul Aziz Shah." },
+  { text: "Kesultanan Deli berdiri setelah Kerajaan Sriwijaya runtuh.", correct: false, explanation: "Kesultanan Deli berdiri jauh setelah runtuhnya Sriwijaya, sekitar tahun 1630-an." },
+  { text: "Kerajaan Samudra Pasai pernah dijajah oleh Belanda pada abad ke-13.", correct: false, explanation: "Belanda belum datang ke Indonesia saat itu." },
+  { text: "Kesultanan Siak tidak pernah berhubungan dengan bangsa Eropa.", correct: false, explanation: "Kesultanan Siak pernah berhubungan dan berkonflik dengan Belanda dan Inggris." },
+  { text: "Kesultanan Indragiri didirikan setelah masa penjajahan Belanda berakhir.", correct: false, explanation: "Kesultanan Indragiri berdiri sebelum penjajahan Belanda, sekitar abad ke-13 Masehi." },
+  { text: "Agama resmi Kesultanan Siak adalah Islam.", correct: true },
+  { text: "Kerajaan Samudra Pasai berdiri pada abad ke-13 Masehi.", correct: true },
+  { text: "Kesultanan Deli terkenal sebagai penghasil emas terbesar di Sumatra.", correct: false, explanation: "Kesultanan Deli terkenal sebagai penghasil tembakau berkualitas tinggi, terutama tembakau deli." },
+  { text: "Kerajaan Aceh Darussalam dikenal sebagai pusat perdagangan dan penyebaran Islam di Asia Tenggara.", correct: true },
+  { text: "Kerajaan Perlak memiliki dua golongan utama, yaitu Syiah dan Sunni.", correct: true },
+  { text: "Bahasa yang digunakan dalam perdagangan di Samudra Pasai adalah bahasa Arab dan Melayu.", correct: true },
+  { text: "Kesultanan Serdang merupakan kerajaan Islam.", correct: true },
+  { text: "Kesultanan Indragiri mulai mengalami kemunduran sejak masuknya pengaruh Belanda.", correct: true },
+  { text: "Sultan Ma'mun Al Rasyid Perkasa Alam merupakan sultan yang memimpin pada masa kejayaan Kesultanan Deli.", correct: true },
+  { text: "Kerajaan Perlak runtuh karena diserang oleh Portugis.", correct: false, explanation: "Kerajaan Perlak bersatu dengan Kerajaan Samudra Pasai." },
+  { text: "Kesultanan Langkat berdiri pada abad ke-20.", correct: false, explanation: "Kesultanan Langkat berdiri pada abad ke-19, sekitar tahun 1869." },
+  { text: "Kesultanan Serdang dikenal sebagai pusat penyebaran agama Kristen di Sumatra Timur.", correct: false, explanation: "Kesultanan Serdang merupakan kerajaan Islam." },
+  { text: "Kesultanan Indragiri tidak pernah berhubungan dengan Kerajaan Malaka.", correct: false, explanation: "Kesultanan Indragiri pernah menjalin hubungan dengan Kerajaan Malaka." },
+  { text: "Kerajaan Aceh Darussalam runtuh pada abad ke-17 karena invasi dari Inggris.", correct: false, explanation: "Kerajaan Aceh mulai melemah karena perpecahan internal dan tekanan dari Belanda, bukan Inggris." },
+  { text: "Kesultanan Deli tidak pernah menjalin hubungan dengan Belanda.", correct: false, explanation: "Kesultanan Deli menjalin kerja sama dengan Belanda, terutama dalam pengelolaan perkebunan tembakau." },
+  { text: "Bahasa resmi yang digunakan di Kerajaan Perlak adalah bahasa Arab.", correct: false, explanation: "Bahasa lokal digunakan, meskipun pengaruh Arab ada." },
+  { text: "Kerajaan Perlak dikenal juga dengan nama Peureulak.", correct: true },
+  { text: "Kesultanan Serdang berdiri karena konflik suksesi di Kesultanan Deli.", correct: true },
+  { text: "Kerajaan Samudra Pasai hanya berdiri selama 20 tahun.", correct: false, explanation: "Kerajaan ini berdiri lebih dari 100 tahun, sejak abad ke-13 sampai 15 Masehi." },
+  { text: "Kesultanan Siak mencapai kejayaan pada masa Sultan Syarif Kasim II.", correct: false, explanation: "Puncak kejayaan terjadi pada masa Sultan Syarif Kasim I." },
+  { text: "Kesultanan Langkat memiliki istana yang disebut Istana Tanjung Pura.", correct: true },
+  { text: "Sultan Syarif Kasim II menyumbangkan harta pribadinya untuk kemerdekaan Indonesia.", correct: true },
+   { text: "Kesultanan Langkat runtuh karena diserang oleh kerajaan dari Jawa.", correct: false, explanation: "Kesultanan Langkat runtuh karena revolusi sosial tahun 1946, bukan karena serangan dari Jawa." },
+  { text: "Kesultanan Siak Sri Indrapura terletak di wilayah Riau, Sumatra.", correct: true },
+  { text: "Kesultanan Siak runtuh karena serangan dari Kerajaan Aceh.", correct: false, explanation: "Kesultanan Siak runtuh karena bergabung dengan Republik Indonesia tahun 1946." },
+  { text: "Kesultanan Serdang memiliki hubungan baik dengan Belanda.", correct: true, explanation: "Kesultanan Serdang sempat menjalin kerja sama dengan Belanda dalam bidang pemerintahan." },
+  { text: "Kerajaan Perlak adalah kerajaan Islam pertama di Indonesia.", correct: true },
+  { text: "Kesultanan Indragiri sudah tidak memiliki kekuasaan politik, hanya sebagai warisan budaya dan sejarah.", correct: true },
+  { text: "Kesultanan Indragiri berdiri setelah masa penjajahan Belanda berakhir.", correct: false, explanation: "Kesultanan Indragiri berdiri sekitar abad ke-13 Masehi, sebelum penjajahan Belanda." },
+  { text: "Kesultanan Deli masih memiliki garis keturunan yang hidup hingga saat ini.", correct: true },
+  { text: "Kesultanan Siak tidak pernah berhubungan dengan bangsa Eropa.", correct: false, explanation: "Kesultanan Siak pernah berhubungan dan berkonflik dengan Belanda dan Inggris." },
+  { text: "Kerajaan Aceh Darussalam berdiri pada abad ke-13 Masehi.", correct: false, explanation: "Kerajaan Aceh Darussalam berdiri pada abad ke-16 Masehi, sekitar tahun 1511." },
+  { text: "Kesultanan Serdang didirikan pada abad ke-18 Masehi.", correct: true },
+  { text: "Kesultanan Indragiri sempat menjadi bagian dari pengaruh Kerajaan Majapahit.", correct: true },
+  { text: "Kesultanan Langkat masih memegang kekuasaan politik penuh hingga saat ini.", correct: false, explanation: "Setelah kemerdekaan, kekuasaan politik Kesultanan Langkat berakhir." },
+  { text: "Letak Kerajaan Samudra Pasai berada di pesisir selatan Pulau Jawa.", correct: false, explanation: "Letaknya di pesisir utara Aceh." },
+  { text: "Sultan pertama Kerajaan Perlak adalah Sultan Malik As-Saleh.", correct: false, explanation: "Sultan pertama Kerajaan Perlak adalah Sultan Alaiddin Syed Maulana Abdul Aziz Shah." },
+  { text: "Kesultanan Langkat memiliki hubungan dengan Kesultanan Deli.", correct: true },
+  { text: "Kesultanan Siak terkenal sebagai pusat perdagangan dan penyebaran Islam di wilayah timur Sumatra.", correct: true },
+  { text: "Sultan Iskandar Muda adalah salah satu raja terbesar dari Kerajaan Aceh Darussalam.", correct: true },
+  { text: "Kerajaan Samudra Pasai pernah dijajah oleh Belanda pada abad ke-13.", correct: false, explanation: "Belanda belum datang ke Indonesia saat itu." },
+  { text: "Kerajaan Perlak berdiri pada abad ke-15 Masehi.", correct: false, explanation: "Kerajaan Perlak berdiri pada abad ke-9 Masehi." },
+  
+];
+
+function startArcadeMode() {
+  hideAll();
+  document.getElementById('frame-arcade').classList.remove('hidden');
+}
+
+function startArcadeQuiz() {
+  arcadeType = 'quiz';
+  arcadeScore = 0;
+  arcadeIndex = 0;
+  arcadeQuestions = arcadeQuestionPool.sort(() => Math.random() - 0.5).slice(0, 10);
+  showArcadeQuestion();
+}
+
+function showArcadeQuestion() {
+  hideAll();
+  if (arcadeIndex >= arcadeQuestions.length) {
+    showArcadeResult();
+    return;
+  }
+
+  const q = arcadeQuestions[arcadeIndex];
+  document.getElementById('frame-arcade-question').classList.remove('hidden');
+  document.getElementById('arcade-question-text').textContent = q.text;
+
+  const btnTrue = document.getElementById('arcade-btn-true');
+  const btnFalse = document.getElementById('arcade-btn-false');
+
+  btnTrue.disabled = false;
+  btnFalse.disabled = false;
+
+  btnTrue.onclick = () => checkArcadeAnswer(true);
+  btnFalse.onclick = () => checkArcadeAnswer(false);
+}
+
+function checkArcadeAnswer(answer) {
+  const correct = arcadeQuestions[arcadeIndex].correct;
+  if (answer === correct) arcadeScore += 10;
+  arcadeIndex++;
+  showArcadeQuestion();
+}
+
+function showArcadeResult() {
+  hideAll();
+  document.getElementById('frame-arcade-result').classList.remove('hidden');
+  document.getElementById('arcade-final-score').textContent = arcadeScore;
+}
+
+function startArcadeEssay() {
+  arcadeType = 'essay';
+  hideAll();
+  document.getElementById('frame-arcade-essay').classList.remove('hidden');
+}
+
+function submitEssayAnswer() {
+  const userAnswer = document.getElementById('arcade-essay-input').value;
+  console.log('Jawaban Essay:', userAnswer);
+  alert('Jawaban kamu sudah direkam!');
+  startArcadeMode();
+}
+
 // ===================== DESKRIPSI SETIAP KERAJAAN =====================
 
 const perlakDescription = "Kerajaan Perlak adalah kerajaan Islam pertama di Indonesia yang berdiri pada tahun 840 M di wilayah Aceh Timur, Provinsi Aceh. Didirikan oleh Sultan Alaiddin Syed Maulana Abdul Aziz Shah, kerajaan ini berkembang sebagai pusat penyebaran Islam dan perdagangan di Asia Tenggara. Kerajaan Perlak mengalami masa kejayaan melalui hubungan dagang dengan Arab, Persia, dan India. Kerajaan ini kemudian mengalami perpecahan menjadi Perlak Barat dan Perlak Timur karena konflik internal, sebelum akhirnya bersatu kembali dan melebur ke dalam Kerajaan Samudra Pasai pada abad ke-13.";
