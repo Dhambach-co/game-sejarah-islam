@@ -81,7 +81,7 @@ button:hover:enabled {
 
 /* ====== TOP BAR STYLE ====== */
 .top-bar {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -193,4 +193,10 @@ button:hover:enabled {
     font-size: 1rem;
     padding: 12px;
   }
+}
+
+.start-journey h1,
+.narrative .narration,
+#frame-question .question-text {
+  margin-top: 70px; 
 }
