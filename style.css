@@ -32,7 +32,7 @@ h1 {
 .screen {
   width: 100vw;
   height: 100vh;
-  padding: 80px 20px 20px 20px
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +43,6 @@ h1 {
   background-image: url('img/bg njay.jpg');
 }
 
-/* Khusus: agar semua frame tetap pakai background yang sama */
 .splash,
 .menu,
 .start-journey,
@@ -91,6 +90,7 @@ button:hover:enabled {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  min-height: 60px; /* biar stabil */
 }
 
 /* ====== MENU BUTTONS ====== */
@@ -183,8 +183,34 @@ button:hover:enabled {
   font-weight: bold;
 }
 
+/* ====== SPACING UNTUK YANG TERHALANG TOP BAR ====== */
+.start-journey h1,
+.narrative .narration,
+#frame-question .question-text {
+  margin-top: 80px; /* biar tidak ketabrak top-bar */
+}
+
 /* ====== MOBILE RESPONSIVE ====== */
 @media (max-width: 480px) {
+  .top-bar {
+    padding: 8px 16px;
+    min-height: 50px;
+  }
+
+  .top-bar button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .coin-display {
+    font-size: 1rem;
+    padding: 0 2vw;
+  }
+
+  .nav-title {
+    font-size: 1.2rem;
+  }
+
   .question-text {
     font-size: 1.2rem;
   }
@@ -194,9 +220,3 @@ button:hover:enabled {
     padding: 12px;
   }
 }
-
-.start-journey h1,
-.narrative .narration,
-#frame-question .question-text {
-  margin-top: 70px;
-
