@@ -1,0 +1,197 @@
+/* ====== FONT IMPORT ====== */
+@font-face {
+  font-family: 'browman';
+  src: url('fonts/browman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ====== GLOBAL RESET ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'browman', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ====== HEADING STYLE ====== */
+h1 {
+  font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #38611B;
+}
+
+/* ====== SCREEN FRAME STYLE ====== */
+.screen {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('img/bg njay.jpg');
+}
+
+/* Khusus: agar semua frame tetap pakai background yang sama */
+.splash,
+.menu,
+.start-journey,
+.narrative,
+.question {
+  background-image: url('img/bg njay.jpg');
+}
+
+/* ====== UTILITY CLASS ====== */
+.hidden {
+  display: none;
+}
+
+/* ====== BUTTON STYLE ====== */
+button {
+  padding: 1em 2em;
+  font-size: 1.1em;
+  margin: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f5c542;
+  cursor: pointer;
+  color: #38611B;
+  transition: background-color 0.2s ease;
+}
+
+button:hover:enabled {
+  background-color: #e3b931;
+}
+
+.locked {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* ====== TOP BAR STYLE ====== */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3E6B1C;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ====== MENU BUTTONS ====== */
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ====== REGION BUTTONS ====== */
+.region-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(0.1rem, 0.1vw, 1.5rem);
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* ====== NARRATION BOX ====== */
+.narration {
+  height: 50vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  color: #333;
+  text-align: justify;
+  width: 90%;
+  max-width: 800px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* ====== QUIZ CHOICES ====== */
+.choices button {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 5px auto;
+  padding: clamp(10px, 2vw, 20px);
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* ====== ANSWER FEEDBACK ====== */
+.correct {
+  background-color: orange !important;
+  color: white;
+}
+
+.wrong {
+  background-color: red !important;
+  color: white;
+}
+
+/* ====== COIN STYLE ====== */
+.coin-display {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  padding: 0vw 3vw;
+}
+
+/* ====== NAVIGATION TITLE ====== */
+.nav-title {
+  color: white;
+  font-size: 1.5rem;
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ====== QUESTION TEXT ====== */
+.question-text {
+  font-size: clamp(1rem, 2.5vw + 0.5rem, 2rem);
+  color: #000;
+  text-align: center;
+  margin: 80px 0 20px;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+/* ====== MOBILE RESPONSIVE ====== */
+@media (max-width: 480px) {
+  .question-text {
+    font-size: 1.2rem;
+  }
+
+  .choices button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
