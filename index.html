@@ -19,7 +19,7 @@
   <h1>ISLAMIC LEGACY</h1>
   <div class="menu-buttons">
     <button onclick="goToStartJourney()">START JOURNEY</button>
-    <button disabled>ARCADE</button>
+    <button onclick="goToArcade()">ARCADE</button>
     <button disabled>REWARD</button>
     <button disabled>SETTINGS</button>
   </div>
@@ -160,6 +160,53 @@
   <p>Selamat, Anda telah membuka wilayah baru!</p>
   <button onclick="goToStartJourney()">LANJUTKAN PETUALANGAN</button>
 </div>
+
+  <!-- FRAME ARCADE MENU -->
+<div id="frame-arcade" class="screen hidden arcade-menu">
+  <div class="top-bar">
+    <button onclick="backToMenu()">Kembali ke Menu</button>
+  </div>
+  <h1 class="top-space">ARCADE MODE</h1>
+  <div class="menu-buttons">
+    <button onclick="startArcadeBenarSalah()">BENAR / SALAH</button>
+    <button onclick="startArcadeEssay()">ESSAY</button>
+  </div>
+</div>
+
+  <!-- FRAME ARCADE BENAR/SALAH -->
+<div id="frame-arcade-question" class="screen hidden arcade-question">
+  <div class="top-bar">
+    <button onclick="backToArcade()">Kembali</button>
+    <div class="coin-display">Skor: <span id="arcade-score">0</span></div>
+  </div>
+  <p class="question-text top-space" id="arcade-question-text">Pertanyaan akan muncul di sini...</p>
+  <div class="choices">
+    <button onclick="checkArcadeAnswer(true)">BENAR</button>
+    <button onclick="checkArcadeAnswer(false)">SALAH</button>
+  </div>
+  <p id="arcade-feedback"></p>
+</div>
+
+  <!-- FRAME ARCADE RESULT -->
+<div id="frame-arcade-result" class="screen hidden arcade-result">
+  <h2>HASIL ANDA 🎯</h2>
+  <p>Skor Akhir: <span id="arcade-final-score">0</span></p>
+  <p>Nilai: <span id="arcade-grade">C</span></p>
+  <button onclick="goToArcade()">ULANGI</button>
+  <button onclick="backToMenu()">KEMBALI KE MENU</button>
+</div>
+
+  <!-- FRAME ESSAY ARCADE -->
+<div id="frame-arcade-essay" class="screen hidden arcade-essay">
+  <div class="top-bar">
+    <button onclick="backToArcade()">Kembali</button>
+  </div>
+  <p id="essay-question-text">Soal essay muncul di sini...</p>
+  <textarea id="essay-answer" rows="4"></textarea>
+  <button onclick="submitEssayAnswer()">SUBMIT</button>
+  <p id="essay-feedback"></p>
+</div>
+
 
 <!-- SCRIPTS -->
 <script src="script.js"></script>
