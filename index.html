@@ -1,214 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Islamic Legacy</title>
+  <title>Game Sejarah Islam</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body style="overflow: hidden; height: 100vh;">
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="screen">
+    <h1>Sejarah Islam Sumatra</h1>
+    <p>Loading...</p>
+  </div>
 
-<!-- FRAME 0: SPLASH SCREEN -->
-<div id="frame-splash" class="screen splash">
-  <h1>ISLAMIC LEGACY</h1>
-  <button onclick="goToMenu()">TAP TO START</button>
-</div>
+  <!-- Main Menu -->
+  <div id="main-menu" class="screen hidden">
+    <h2>Main Menu</h2>
+    <button onclick="startJourney()">Start Journey</button>
+    <button onclick="openArcade()">Arcade Mode</button>
+    <button onclick="openSettings()">Settings</button>
+  </div>
 
-<!-- FRAME MENU -->
-<div id="frame-menu" class="screen hidden menu">
-  <h1>ISLAMIC LEGACY</h1>
-  <div class="menu-buttons">
-    <button onclick="goToStartJourney()">START JOURNEY</button>
-    <button onclick="goToArcade()">ARCADE</button>
-    <button disabled>REWARD</button>
-    <button disabled>SETTINGS</button>
+  <!-- Journey Map -->
+  <div id="journey-screen" class="screen hidden">
+    <h2>Jelajahi Wilayah</h2>
+    <div id="map-container"></div>
+    <button onclick="goToMenu()">Kembali ke Menu</button>
   </div>
-</div>
 
-<!-- FRAME START JOURNEY -->
-<div id="frame-start" class="screen hidden start-journey">
-  <div class="top-bar">
-    <button onclick="backToMenu()">Kembali ke Menu</button>
+  <!-- Narasi Wilayah -->
+  <div id="narration-screen" class="screen hidden">
+    <h2 id="wilayah-title"></h2>
+    <p id="wilayah-desc">Deskripsi wilayah</p>
+    <button onclick="mulaiQuiz()">Mulai Quiz</button>
   </div>
-  <h1 class="top-space">START JOURNEY</h1>
-  <div class="region-list">
-    <button onclick="openNarrativePerlak()">KERAJAAN PERLAK</button>
-    <button onclick="openNarrativeSamudra()" id="btn-samudra" class="locked" disabled>SAMUDRA PASAI</button>
-    <button onclick="openNarrativeAceh()" id="btn-aceh" class="locked" disabled>ACEH DARUSSALAM</button>
-    <button onclick="openNarrativeDeli()" id="btn-deli" class="locked" disabled>KESULTANAN DELI</button>
-    <button onclick="openNarrativeSerdang()" id="btn-serdang" class="locked" disabled>KESULTANAN SERDANG</button>
-    <button onclick="openNarrativeLangkat()" id="btn-langkat" class="locked" disabled>KESULTANAN LANGKAT</button>
-    <button onclick="openNarrativeSiak()" id="btn-siak" class="locked" disabled>KESULTANAN SIAK</button>
-    <button onclick="openNarrativeIndragiri()" id="btn-indragiri" class="locked" disabled>KESULTANAN INDRAGIRI</button>
-  </div>
-</div>
 
-<!-- FRAME NARATIF UNTUK SETIAP KERAJAAN -->
-<div id="frame-narrative-perlak" class="screen hidden narrative">
-  <div class="top-bar">
-    <button onclick="backToStart()">Kembali</button>
+  <!-- Quiz Pilgan -->
+  <div id="quiz-screen" class="screen hidden">
+    <div id="quiz-soal"></div>
+    <div id="quiz-opsi"></div>
+    <p id="quiz-progress"></p>
+    <button onclick="goToMenu()">Kembali ke Menu</button>
   </div>
-  <div class="narration top-space">
-    <p id="deskripsi-perlak"></p>
-  </div>
-  <button onclick="startQuizPerlak()">MULAI QUIZ</button>
-</div>
 
-<div id="frame-narrative-samudra" class="screen hidden narrative">
-  <div class="top-bar">
-    <button onclick="backToStart()">Kembali</button>
+  <!-- Hasil Quiz -->
+  <div id="result-screen" class="screen hidden">
+    <h2 id="result-title">Hasil Quiz</h2>
+    <p id="result-text">Skor Anda: <span id="result-score"></span></p>
+    <button onclick="goToMenu()">Kembali ke Menu</button>
   </div>
-  <div class="narration top-space">
-    <p id="deskripsi-samudra"></p>
-  </div>
-  <button onclick="startQuizSamudra()">MULAI QUIZ</button>
-</div>
 
-<div id="frame-narrative-aceh" class="screen hidden narrative">
-  <div class="top-bar">
-    <button onclick="backToStart()">Kembali</button>
+  <!-- Fail Screen (jika skor rendah) -->
+  <div id="fail-screen" class="screen hidden">
+    <h2>Anda Gagal!</h2>
+    <p>Skor Anda terlalu rendah. Coba lagi!</p>
+    <button onclick="goToMenu()">Kembali ke Menu</button>
   </div>
-  <div class="narration top-space">
-    <p id="deskripsi-aceh"></p>
-  </div>
-  <button onclick="startQuizAceh()">MULAI QUIZ</button>
-</div>
 
-<div id="frame-narrative-deli" class="screen hidden narrative">
-  <div class="top-bar">
-    <button onclick="backToStart()">Kembali</button>
+  <!-- Arcade Mode -->
+  <div id="arcade-menu" class="screen hidden">
+    <h2>Arcade Mode</h2>
+    <button onclick="startArcade('true_false')">Benar / Salah</button>
+    <button onclick="startArcade('essay')">Isian</button>
+    <button onclick="goToMenu()">Kembali</button>
   </div>
-  <div class="narration top-space">
-    <p id="deskripsi-deli"></p>
-  </div>
-  <button onclick="startQuizDeli()">MULAI QUIZ</button>
-</div>
 
-<div id="frame-narrative-serdang" class="screen hidden narrative">
-  <div class="top-bar">
-    <button onclick="backToStart()">Kembali</button>
+  <!-- Arcade Soal (Benar/Salah) -->
+<div id="arcade-quiz-tf" class="screen hidden arcade-quiz" data-active="false">
+    <div class="quiz-header">
+      <h2>Mode Benar/Salah</h2>
+      <div class="timer-box">
+         <div class="timer-wrapper">
+          <span class="timer-label">⏱️ Waktu tersisa:</span>
+          <span id="timer-count-tf" class="timer-value">10</span>
+          <span class="timer-unit">detik</span>
+        </div>
+        <p>Soal: <span id="current-question">1</span>/<span id="total-questions">10</span></p>
+      </div>
+    </div>
+    <div class="question-container">
+      <p id="tf-question-text" class="question-text">[Pertanyaan akan muncul di sini]</p>
+    </div>
+    <div class="options-box">
+      <button class="btn-tf" onclick="checkTFAnswer(true)">
+        <span class="btn-text">Benar</span>
+        <span class="hotkey">(B)</span>
+      </button>
+      <button class="btn-tf" onclick="checkTFAnswer(false)">
+        <span class="btn-text">Salah</span>  
+        <span class="hotkey">(S)</span>
+      </button>
+    </div>
   </div>
-  <div class="narration top-space">
-    <p id="deskripsi-serdang"></p>
-  </div>
-  <button onclick="startQuizSerdang()">MULAI QUIZ</button>
-</div>
 
-<div id="frame-narrative-langkat" class="screen hidden narrative">
-  <div class="top-bar">
-    <button onclick="backToStart()">Kembali</button>
+ <!-- Arcade Soal (Essay) -->
+<div id="arcade-quiz-essay" class="screen hidden arcade-quiz">
+  <div class="quiz-header">
+    <h2>Mode Isian</h2>
+    <div class="timer-box">
+      <p>Waktu: <span id="timer-count-essay">15</span> detik</p>
+      <p>Soal: <span id="current-essay">1</span>/<span id="total-essays">10</span></p>
+    </div>
   </div>
-  <div class="narration top-space">
-    <p id="deskripsi-langkat"></p>
-  </div>
-  <button onclick="startQuizLangkat()">MULAI QUIZ</button>
-</div>
 
-<div id="frame-narrative-siak" class="screen hidden narrative">
-  <div class="top-bar">
-    <button onclick="backToStart()">Kembali</button>
+  <div class="question-container">
+    <p id="essay-question-text" class="question-text">[Pertanyaan isian akan muncul di sini]</p>
   </div>
-  <div class="narration top-space">
-    <p id="deskripsi-siak"></p>
-  </div>
-  <button onclick="startQuizSiak()">MULAI QUIZ</button>
-</div>
 
-<div id="frame-narrative-indragiri" class="screen hidden narrative">
-  <div class="top-bar">
-    <button onclick="backToStart()">Kembali</button>
-  </div>
-  <div class="narration top-space">
-    <p id="deskripsi-indragiri"></p>
-  </div>
-  <button onclick="startQuizIndragiri()">MULAI QUIZ</button>
-</div>
+  <!-- Kotak-kotak kosong untuk jawaban -->
+  <div id="jawaban-box-container" style="display: flex; gap: 8px; margin: 10px 0;"></div>
 
-<!-- FRAME QUESTION (reusable untuk semua quiz) -->
-<div id="frame-question" class="screen hidden question">
-  <div class="top-bar">
-    <button onclick="backToNarrative()">Kembali</button>
-    <h2 class="nav-title" id="nav-title">KUIS</h2>
-    <div class="coin-display">💰 <span id="coin">100</span></div>
-  </div>
-  <p class="question-text top-space" id="question-text">Soal akan tampil di sini...</p>
-  <div class="choices">
-    <button onclick="checkAnswer('A')" id="A">A</button>
-    <button onclick="checkAnswer('B')" id="B">B</button>
-    <button onclick="checkAnswer('C')" id="C">C</button>
-    <button onclick="checkAnswer('D')" id="D">D</button>
-  </div>
-  <p id="feedback"></p>
-</div>
-
-<!-- FRAME: QUIZ GAGAL -->
-<div id="frame-quiz-failed" class="screen hidden">
-  <div class="top-bar">
-    <div class="coin-display">💰 <span id="coin-fail">0</span></div>
-  </div>
-  <h2>😢</h2>
-  <p>Masih ada yang belum terjawab dengan benar.</p>
-  <button onclick="backToNarrative()">COBA LAGI YUK!</button>
-</div>
-
-<!-- FRAME: QUIZ SUKSES -->
-<div id="frame-quiz-success" class="screen hidden">
-  <div class="top-bar">
-    <div class="coin-display">💰 <span id="coin-success">0</span></div>
-  </div>
-  <h2>🎉</h2>
-  <p>Selamat, Anda telah membuka wilayah baru!</p>
-  <button onclick="goToStartJourney()">LANJUTKAN PETUALANGAN</button>
-</div>
-
-  <!-- FRAME ARCADE MENU -->
-<div id="frame-arcade" class="screen hidden arcade-menu">
-  <div class="top-bar">
-    <button onclick="backToMenu()">Kembali ke Menu</button>
-  </div>
-  <h1 class="top-space">ARCADE MODE</h1>
-  <div class="menu-buttons">
-    <button onclick="startArcadeBenarSalah()">BENAR / SALAH</button>
-    <button onclick="startArcadeEssay()">ESSAY</button>
-  </div>
-</div>
-
-  <!-- FRAME ARCADE BENAR/SALAH -->
-<div id="frame-arcade-question" class="screen hidden arcade-question">
-  <div class="top-bar">
-    <button onclick="backToArcade()">Kembali</button>
-    <div class="coin-display">Skor: <span id="arcade-score">0</span></div>
-  </div>
-  <p class="question-text top-space" id="arcade-question-text">Pertanyaan akan muncul di sini...</p>
-<div class="choices">
-  <button id="arcade-btn-true" onclick="checkArcadeAnswer(true)">BENAR</button>
-  <button id="arcade-btn-false" onclick="checkArcadeAnswer(false)">SALAH</button>
-</div>
-  <p id="arcade-feedback"></p>
-</div>
-
-  <!-- FRAME ARCADE RESULT -->
-<div id="frame-arcade-result" class="screen hidden arcade-result">
-  <h2>HASIL ANDA 🎯</h2>
-  <p>Skor Akhir: <span id="arcade-final-score">0</span></p>
-  <p>Nilai: <span id="arcade-grade">C</span></p>
-  <button onclick="goToArcade()">ULANGI</button>
-  <button onclick="backToMenu()">KEMBALI KE MENU</button>
-</div>
-
-  <!-- FRAME ESSAY ARCADE -->
-<div id="frame-arcade-essay" class="screen hidden arcade-essay">
-  <div class="top-bar">
-    <button onclick="backToArcade()">Kembali</button>
-  </div>
-  <p id="essay-question-text">Soal essay muncul di sini...</p>
- <textarea id="arcade-essay-input" rows="4"></textarea>
-  <button onclick="submitEssayAnswer()">SUBMIT</button>
-  <p id="essay-feedback"></p>
+  <!-- Pilihan huruf acak -->
+  <div id="pilihan-huruf" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;"></div>
 </div>
 
 
-<!-- SCRIPTS -->
-<script src="script.js"></script>
+  <!-- Arcade Result -->
+  <div id="arcade-result" class="screen hidden result-screen">
+    <h2>Hasil Arcade</h2>
+    <div class="result-content">
+      <p id="arcade-score">Skor: <span class="score-value">0</span>/10</p>
+      <p id="arcade-grade">Indikator: <span class="grade-value">-</span></p>
+      <button class="btn-menu" onclick="goToMenu()">
+        <span>Menu Utama</span>
+        <span class="hotkey">(Esc)</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div id="settings-screen" class="screen hidden">
+    <h2>Pengaturan</h2>
+    <label>
+      Volume Musik: <input type="range" min="0" max="100" value="50" />
+    </label><br/>
+    <label>
+      Volume Efek: <input type="range" min="0" max="100" value="50" />
+    </label><br/>
+    <label>
+      Bahasa:
+      <select>
+        <option>Indonesia</option>
+        <option disabled>English (coming soon)</option>
+      </select>
+    </label>
+    <br/>
+    <button onclick="goToMenu()">Kembali</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
