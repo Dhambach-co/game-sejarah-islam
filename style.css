@@ -1,274 +1,479 @@
-/* ====== FONT IMPORT ====== */
 @font-face {
-  font-family: 'browman';
+  font-family: 'Browman';
   src: url('fonts/Browman.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-/* ====== GLOBAL RESET ====== */
+/* Reset dasar */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'browman', sans-serif;
 }
 
-body, html {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* ====== HEADING STYLE ====== */
-h1 {
-  font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
-  text-align: center;
-  margin-bottom: 10px;
-  color: #38611B;
-}
-
-/* ====== SCREEN FRAME STYLE ====== */
-.screen {
-  width: 100vw;
-  height: 100vh;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+body {
+  font-family: 'Browman', 'Segoe UI', Tahoma, sans-serif; /* Pastikan ini adalah font utama */
+  background-image: url('img/bg njay.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('img/bg njay.jpg');
+  height: 100vh;
+  color: #fff;
+  padding: 20px;
+  backdrop-filter: brightness(0.85);
+  display: flex; /* Tambahkan ini untuk centering konten utama */
+  justify-content: center; /* Tambahkan ini untuk centering konten utama */
+  align-items: center; /* Tambahkan ini untuk centering konten utama */
+overflow: hidden;
 }
 
-.splash,
-.menu,
-.start-journey,
-.narrative,
-.question,
-#frame-arcade,
-#frame-arcade-question,
-#frame-arcade-result,
-#frame-arcade-essay {
-  background-image: url('img/bg njay.jpg');
-}
-
-/* ====== UTILITY CLASS ====== */
-.hidden {
+/* Layout umum */
+.screen {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh; /* Gunakan 100vh agar layar penuh */
+  width: 100%; /* Pastikan mengambil lebar penuh */
+  max-width: 900px; /* Batasi lebar maksimum untuk tampilan desktop */
+  margin: auto; /* Pusatkan di tengah */
+  padding: 20px;
+  transition: opacity 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan untuk konten */
+  border-radius: 15px; /* Sudut membulat */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek kedalaman */
+  opacity: 50%;
+  pointer-events: none;
 }
 
-/* ====== BUTTON STYLE ====== */
+.screen.active,
+.screen:not(.hidden) {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Tombol */
 button {
-  padding: 1em 2em;
-  font-size: 1.1em;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 12px 24px;
   margin: 10px;
-  border-radius: 12px;
-  border: none;
-  background-color: #f5c542;
+  font-size: 18px;
   cursor: pointer;
-  color: #38611B;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease; /* Tambah transform */
+  font-family: 'Browman', sans-serif !important; /* Terapkan font Browman */
 }
 
-button:hover:enabled {
-  background-color: #e3b931;
+button:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+  transform: translateY(-3px); /* Efek hover */
+   box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
 }
 
-.locked {
-  background: #aaa;
+button:disabled {
+  background-color: rgba(50, 50, 50, 0.7);
+  border-color: rgba(100, 100, 100, 0.7);
+  color: #aaa;
   cursor: not-allowed;
+  transform: none;
 }
 
-/* ====== TOP BAR STYLE ====== */
-.top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* Judul dan teks */
+h1, h2 {
+  font-family: 'Browman', sans-serif !important; /* Terapkan font Browman */
+  font-size: 2.8em; /* Sedikit lebih besar */
+  margin-bottom: 20px; /* Jarak bawah lebih besar */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Bayangan lebih kuat */
+  color: #FFD700; /* Warna emas untuk judul */
+}
+
+p {
+  font-family: 'Browman', sans-serif !important; /* Terapkan font Browman */
+  font-size: 1.3em; /* Sedikit lebih besar */
+  margin: 15px 0; /* Jarak atas/bawah lebih besar */
+  max-width: 800px;
+  line-height: 1.6; /* Jarak antar baris */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Quiz & Arcade */
+#quiz-opsi button,
+.options-box button { /* Menggabungkan gaya untuk tombol opsi */
   width: 100%;
-  background-color: #3E6B1C;
-  padding: 12px 20px;
+  max-width: 350px; /* Lebar maksimum sedikit lebih besar */
+  margin: 8px auto; /* Jarak antar tombol opsi */
+  padding: 12px;
+  font-size: 1.2em;
+  font-family: 'Browman', sans-serif !important; /* Terapkan font Browman */
+}
+
+#quiz-progress,
+.timer-box p { /* Menggabungkan gaya untuk progress dan timer */
+  margin-top: 25px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ADD8E6; /* Warna biru muda untuk info */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.quiz-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
-  min-height: 60px;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  padding: 0 10px;
 }
 
-/* ====== MENU BUTTONS ====== */
-.menu-buttons {
+.quiz-header h2 {
+  margin: 0;
+  font-size: 2em;
+  color: #FFD700;
+}
+
+.timer-box {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: flex-end;
+  gap: 5px;
 }
 
-/* ====== REGION BUTTONS ====== */
-.region-list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: clamp(0.1rem, 0.1vw, 1.5rem);
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-/* ====== NARRATION BOX ====== */
-.narration {
-  height: 50vh;
-  overflow-y: auto;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 15px;
-  margin: 10px 20px;
+.question-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #fff;
   border-radius: 10px;
-  color: #333;
-  text-align: justify;
-  width: 90%;
-  max-width: 800px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  padding: 20px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 700px;
+  min-height: 100px; /* Tinggi minimum untuk kotak pertanyaan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ====== QUIZ CHOICES ====== */
-.choices button {
-  display: block;
+.question-text {
+  font-size: 1.5em;
+  font-family: 'Browman', sans-serif !important; /* Terapkan font Browman */
+  color: #fff;
+  line-height: 1.5;
+}
+
+.options-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-tf {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px; /* Padding lebih besar */
+  margin: 8px 0;
+  font-size: 1.3em; /* Ukuran font lebih besar */
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #fff;
+  border-radius: 10px; /* Sudut lebih membulat */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  font-family: 'Browman', sans-serif !important; /* Terapkan font Browman */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-tf:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+  transform: translateY(-3px);
+}
+
+.hotkey {
+  font-size: 0.8em;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
   width: 100%;
   max-width: 400px;
-  margin: 5px auto;
-  padding: clamp(10px, 2vw, 20px);
-  font-size: clamp(0.9rem, 2vw, 1.2rem);
-  border-radius: 10px;
-  box-sizing: border-box;
 }
 
-/* ====== ANSWER FEEDBACK ====== */
-.correct {
-  background-color: orange !important;
-  color: white;
-}
-
-.wrong {
-  background-color: red !important;
-  color: white;
-}
-
-/* ====== COIN STYLE ====== */
-.coin-display {
+.input-box input {
+  padding: 12px;
   font-size: 1.2em;
-  font-weight: bold;
-  color: #fff;
-  padding: 0vw 3vw;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-family: 'Browman', sans-serif !important; /* Terapkan font Browman */
 }
 
-/* ====== NAVIGATION TITLE ====== */
-.nav-title {
-  color: white;
-  font-size: 1.5rem;
-  flex: 1;
-  text-align: center;
-  font-weight: bold;
+.input-box input::placeholder {
+  color: #888;
 }
 
-/* ====== QUESTION TEXT ====== */
-.question-text {
-  font-size: clamp(1rem, 2.5vw + 0.5rem, 2rem);
-  color: #000;
-  text-align: center;
-  margin: 80px 0 20px;
-  padding: 0 20px;
-  font-weight: bold;
-}
-
-/* ====== SPACING UNTUK YANG TERHALANG TOP BAR ====== */
-.start-journey h1,
-.narrative .narration,
-#frame-question .question-text {
-  margin-top: 80px;
-}
-
-/* ====== ARCADE STYLES ====== */
-.arcade-mode-options {
+.btn-submit {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  font-size: 1.3em;
+  font-family: 'Browman', sans-serif !important; /* Terapkan font Browman */
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center;
   align-items: center;
 }
 
-.arcade-score {
-  font-size: 2rem;
-  color: white;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  border-radius: 20px;
-  margin: 20px;
+/* Hasil Arcade */
+.result-screen {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #FFD700;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+}
+
+.result-content p {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.score-value {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.grade-value {
+  color: #ADD8E6;
+  font-weight: bold;
+}
+
+.btn-menu {
+  margin-top: 30px;
+}
+
+/* Responsive map container */
+#map-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Jarak antar tombol peta */
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#map-container button {
+  width: 150px; /* Lebar tombol peta lebih besar */
+  height: 80px; /* Tinggi tombol peta */
+  padding: 10px;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-/* ====== ESSAY MODE ====== */
-.essay-container {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* Settings */
+#settings-screen label {
+  display: block;
+  margin: 15px 0;
+  font-size: 1.2em;
+  font-family: 'Browman', sans-serif !important; /* Terapkan font Browman */
 }
 
-.essay-container textarea {
-  width: 100%;
-  min-height: 120px;
-  font-size: 1rem;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  resize: vertical;
+#settings-screen input[type="range"],
+#settings-screen select {
+  width: 200px;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
-/* ====== MOBILE RESPONSIVE ====== */
-@media (max-width: 480px) {
-  .top-bar {
-    padding: 8px 16px;
-    min-height: 50px;
+#settings-screen select {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-family: 'Browman', sans-serif !important; /* Terapkan font Browman */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
   }
 
-  .top-bar button {
-    font-size: 0.9rem;
-    padding: 6px 12px;
+  .screen {
+    padding: 15px;
+    border-radius: 10px;
   }
 
-  .coin-display {
-    font-size: 1rem;
-    padding: 0 2vw;
+  h1, h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
   }
 
-  .nav-title {
-    font-size: 1.2rem;
+  p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 8px;
+  }
+
+  #map-container button {
+    width: 130px;
+    height: 70px;
+    font-size: 1.1em;
+  }
+
+  .quiz-header h2 {
+    font-size: 1.8em;
   }
 
   .question-text {
-    font-size: 1.2rem;
+    font-size: 1.3em;
   }
 
-  .choices button {
-    font-size: 1rem;
+  .btn-tf, .btn-submit {
+    font-size: 1.1em;
     padding: 12px;
   }
 
-  .essay-container textarea {
-    font-size: 0.9rem;
+  .input-box input {
+    font-size: 1em;
+    padding: 10px;
   }
 
-  .arcade-score {
-    font-size: 1.5rem;
+  .timer-box p {
+    font-size: 1.1em;
   }
 }
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  #map-container button {
+    width: 100%; /* Tombol peta menjadi full width di layar sangat kecil */
+    max-width: 250px;
+    height: 60px;
+    font-size: 1em;
+  }
+
+  .quiz-header h2 {
+    font-size: 1.5em;
+  }
+
+  .question-text {
+    font-size: 1.1em;
+  }
+
+  .btn-tf, .btn-submit {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .input-box input {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  .hotkey {
+    display: none; /* Sembunyikan hotkey di layar sangat kecil */
+  }
+}
+
+.letter-container, .answer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.letter-button, .answer-slot {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+  font-family: 'Browman', sans-serif;
+  min-width: 40px;
+  text-align: center;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.letter-button:hover {
+  background-color: #FFD700;
+}
+
+.answer-slot {
+  background-color: #eee;
+}
+
+.jawaban-box {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.huruf-btn {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-top: 8px solid #FFD700;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
