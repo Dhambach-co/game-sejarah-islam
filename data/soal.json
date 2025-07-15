@@ -1,0 +1,1142 @@
+{
+    "deskripsi wilayah": {
+     "kerajaan": [
+    {
+      "nama": "Kerajaan Perlak",
+      "tahunBerdiri": "840 M",
+      "lokasi": "Aceh Timur, Provinsi Aceh",
+      "pendiri": "Sultan Alaiddin Syed Maulana Abdul Aziz Shah",
+      "deskripsi": "Kerajaan Perlak adalah kerajaan Islam pertama di Indonesia yang berkembang sebagai pusat penyebaran Islam dan perdagangan di Asia Tenggara. Kerajaan ini mengalami masa kejayaan melalui hubungan dagang dengan Arab, Persia, dan India. Namun, Perlak mengalami perpecahan menjadi Perlak Barat dan Perlak Timur karena konflik internal, sebelum akhirnya bersatu kembali dan melebur ke dalam Kerajaan Samudra Pasai pada abad ke-13."
+    },
+    {
+      "nama": "Kerajaan Samudra Pasai",
+      "tahunBerdiri": "Abad ke-13",
+      "lokasi": "Pesisir utara Aceh",
+      "pendiri": "Sultan Malik al-Saleh",
+      "deskripsi": "Kerajaan Samudra Pasai merupakan kerajaan Islam pertama di Asia Tenggara yang menjadi pusat perdagangan dan penyebaran agama Islam. Dikenal dengan kegiatan perdagangan internasional, khususnya ekspor emas dan lada, kerajaan ini mulai melemah pada abad ke-15 dan akhirnya takluk oleh Kerajaan Aceh Darussalam."
+    },
+    {
+      "nama": "Kerajaan Aceh Darussalam",
+      "tahunBerdiri": "1496 M",
+      "lokasi": "Ujung utara Pulau Sumatra",
+      "pendiri": "Sultan Ali Mughayat Syah",
+      "deskripsi": "Kerajaan Aceh Darussalam adalah salah satu kerajaan Islam terbesar dan terkuat di Sumatra, menjadi pusat pendidikan dan dakwah Islam pada abad ke-16 dan 17. Puncak kejayaan terjadi pada masa Sultan Iskandar Muda (1607-1636), yang memperluas wilayah kekuasaan hingga ke Semenanjung Malaya. Kerajaan ini mulai melemah setelah wafatnya Iskandar Muda dan akhirnya menyerah kepada Belanda pada tahun 1903."
+    },
+    {
+      "nama": "Kesultanan Deli",
+      "tahunBerdiri": "1632",
+      "lokasi": "Sumatera Utara",
+      "pendiri": "Tuanku Panglima Gocah Pahlawan",
+      "deskripsi": "Kesultanan Deli adalah kerajaan Islam di Sumatera Utara yang awalnya berada di bawah pengaruh Kesultanan Aceh. Kesultanan ini mencapai puncak kejayaan pada masa Sultan Ma'mun Al Rasyid berkat perdagangan tembakau. Meskipun kekuasaan politiknya berakhir pada masa kolonial, Kesultanan Deli tetap menjadi simbol budaya dan identitas Melayu di Sumatera Utara."
+    },
+    {
+      "nama": "Kesultanan Serdang",
+      "tahunBerdiri": "1723 M",
+      "lokasi": "Sumatera Utara",
+      "pendiri": "Tuanku Umar Johan Alamsyah",
+      "deskripsi": "Kesultanan Serdang didirikan setelah konflik di Kesultanan Deli dan mencapai puncak kejayaan pada masa Sultan Thaf Sinar Baharshah (1817-1850 M). Namun, kemunduran dimulai saat penjajahan Belanda dan konflik internal, hingga akhirnya runtuh pada masa Sultan Sulaiman Syariful Alamsyah (1886-1946 M) setelah Revolusi Sosial 1946."
+    },
+    { "nama": "Kesultanan Langkat",
+      "tahunBerdiri": "Abad ke-17",
+      "lokasi": "Pesisir timur Sumatra",
+      "pendiri": "Raja Dewa Shahdan",
+      "deskripsi": "Kesultanan Langkat berkembang menjadi salah satu kerajaan penting di pesisir timur Sumatra. Masa kejayaan terjadi pada abad ke-19 di bawah Sultan Musa, namun kemunduran mulai tampak pada awal abad ke-20 akibat dominasi Belanda."
+    },
+    {
+      "nama": "Kesultanan Siak Sri Indrapura",
+      "tahunBerdiri": "1723",
+      "lokasi": "Riau",
+      "pendiri": "Sultan Abdul Jalil Rahmat Syah",
+      "deskripsi": "Kesultanan Siak mencapai masa kejayaan pada abad ke-19 melalui perdagangan internasional dan penyebaran Islam. Namun, pengaruh Belanda menyebabkan kemundurannya, hingga akhirnya dibubarkan pada 1946."
+    },
+    {
+      "nama": "Kesultanan Indragiri",
+      "tahunBerdiri": "Abad ke-14",
+      "lokasi": "Pesisir timur Sumatera",
+      "pendiri": "Raja Merlang I",
+      "deskripsi": "Kesultanan Indragiri mencapai masa kejayaan pada abad ke-16 hingga 17 dengan berkembangnya perdagangan dan pengaruh Islam. Namun, kemunduran terjadi sejak abad ke-18 akibat campur tangan Belanda dan konflik internal, hingga dihapuskan pada tahun 1946."
+    }
+  ]
+  },
+  "quiz_data": {
+    "kerajaan_perlak": {
+      "questions": [
+        {
+          "soal": "Apa nama kerajaan Islam pertama di Indonesia?",
+          "pilihan": ["Perlak", "Samudra Pasai", "Demak", "Aceh"],
+          "jawaban": "Perlak"
+        },
+        {
+          "soal": "Kerajaan Perlak berdiri pada abad ke-?",
+          "pilihan": ["7", "8", "9", "10"],
+          "jawaban": "9"
+        },
+        {
+          "soal": "Siapa tokoh yang menyebarkan Islam pertama kali di Perlak?",
+          "pilihan": ["Syekh Ismail", "Nakhoda Khalifah", "Sultan Malik As-Saleh", "Maulana Malik Ibrahim"],
+          "jawaban": "Nakhoda Khalifah"
+        },
+        {
+          "soal": "Kerajaan Perlak dikenal sebagai pusat penyebaran agama?",
+          "pilihan": ["Kristen", "Hindu", "Buddha", "Islam"],
+          "jawaban": "Islam"
+        },
+        {
+          "soal": "Kerajaan Perlak terletak di wilayah yang sekarang menjadi bagian dari?",
+          "pilihan": ["Sumatera Barat", "Sumatera Selatan", "Aceh", "Riau"],
+          "jawaban": "Aceh"
+        },
+        {
+          "soal": "Apa nama pelabuhan utama Kerajaan Perlak pada masa kejayaannya?",
+          "pilihan": ["Pelabuhan Kuala Langsa", "Pelabuhan Perlak", "Pelabuhan Banda", "Pelabuhan Lhokseumawe"],
+          "jawaban": "Pelabuhan Perlak"
+        },
+        {
+          "soal": "Apa dua aliran utama dalam Islam yang ada di Kerajaan Perlak?",
+          "pilihan": ["Syiah dan Sunni", "Sunni dan Wahabi", "Syiah dan Sufi", "Sunni dan Syafi'i"],
+          "jawaban": "Syiah dan Sunni"
+        },
+        {
+          "soal": "Konflik antara golongan Syiah dan Sunni di Perlak menyebabkan?",
+          "pilihan": ["Kemajuan perdagangan", "Pemisahan wilayah", "Perang saudara", "Perluasan wilayah"],
+          "jawaban": "Perang saudara"
+        },
+        {
+          "soal": "Siapa raja pertama dari Kerajaan Perlak?",
+          "pilihan": ["Sultan Iskandar Muda", "Sultan Abdul Aziz Syah", "Sultan Alaiddin Ri'ayat Syah", "Sultan Malik al-Saleh"],
+          "jawaban": "Sultan Abdul Aziz Syah"
+        },
+        {
+          "soal": "Perlak mengalami masa kejayaan terutama di bidang?",
+          "pilihan": ["Pertanian", "Perdagangan maritim", "Pertambangan", "Kerajinan logam"],
+          "jawaban": "Perdagangan maritim"
+        },
+        {
+          "soal": "Kerajaan Perlak menjalin hubungan dagang dengan bangsa?",
+          "pilihan": ["Spanyol dan Italia", "Cina dan Arab", "Mesir dan Jepang", "Belanda dan Inggris"],
+          "jawaban": "Cina dan Arab"
+        },
+        {
+          "soal": "Kerajaan Perlak berakhir karena?",
+          "pilihan": ["Penjajahan Belanda", "Konflik internal dan serangan luar", "Bencana alam", "Ekonomi runtuh"],
+          "jawaban": "Konflik internal dan serangan luar"
+        },
+        {
+          "soal": "Kerajaan Perlak akhirnya digabung dengan kerajaan mana?",
+          "pilihan": ["Deli", "Langkat", "Aceh", "Samudra Pasai"],
+          "jawaban": "Samudra Pasai"
+        },
+        {
+          "soal": "Perlak berperan penting dalam penyebaran Islam ke wilayah?",
+          "pilihan": ["Jawa", "Sumatera Selatan", "Maluku", "Asia Tenggara"],
+          "jawaban": "Asia Tenggara"
+        },
+        {
+          "soal": "Apa salah satu peninggalan penting dari Kerajaan Perlak?",
+          "pilihan": ["Masjid Raya Baiturrahman", "Makam Sultan Abdul Aziz Syah", "Istana Tanjung Pura", "Benteng Indrapatra"],
+          "jawaban": "Makam Sultan Abdul Aziz Syah"
+        }
+      ]
+    },
+    "kerajaan_samudra_pasai": {
+      "questions": [
+        {
+          "soal": "Siapakah pendiri Kerajaan Samudera Pasai?",
+          "pilihan": ["Sultan Malik al-Saleh", "Sultan Iskandar Muda", "Sultan Alauddin", "Sultan Agung"],
+          "jawaban": "Sultan Malik al-Saleh"
+        },
+        {
+          "soal": "Apa komoditas utama yang diperdagangkan oleh Samudera Pasai?",
+          "pilihan": ["Emas", "Tembakau", "Lada", "Kain tenun"],
+          "jawaban": "Lada"
+        },
+        {
+          "soal": "Kerajaan Samudera Pasai berdiri pada abad ke-?",
+          "pilihan": ["11", "12", "13", "14"],
+          "jawaban": "13"
+        },
+        {
+          "soal": "Dimanakah letak Kerajaan Samudera Pasai?",
+          "pilihan": ["Sumatera Utara", "Aceh", "Riau", "Sumatera Selatan"],
+          "jawaban": "Aceh"
+        },
+        {
+          "soal": "Siapa penguasa terkenal dari Samudera Pasai selain pendirinya?",
+          "pilihan": ["Sultan Malik al-Zahir", "Sultan Mahmud Syah", "Sultan Hasanuddin", "Sultan Hamengkubuwono"],
+          "jawaban": "Sultan Malik al-Zahir"
+        },
+        {
+          "soal": "Agama apa yang dianut secara resmi oleh kerajaan ini?",
+          "pilihan": ["Hindu", "Buddha", "Islam", "Kristen"],
+          "jawaban": "Islam"
+        },
+        {
+          "soal": "Sumber sejarah Samudera Pasai berasal dari catatan penjelajah?",
+          "pilihan": ["Marcopolo", "Ibn Battuta", "Cheng Ho", "Al-Masudi"],
+          "jawaban": "Ibn Battuta"
+        },
+        {
+          "soal": "Mata uang yang digunakan di Samudera Pasai disebut?",
+          "pilihan": ["Dirham", "Dinar", "Deureuham", "Rupiah"],
+          "jawaban": "Deureuham"
+        },
+        {
+          "soal": "Bahasa yang digunakan dalam perdagangan di Samudera Pasai adalah?",
+          "pilihan": ["Arab", "Melayu", "Sansakerta", "Tamil"],
+          "jawaban": "Melayu"
+        },
+        {
+          "soal": "Kerajaan Samudera Pasai banyak berinteraksi dengan pedagang dari?",
+          "pilihan": ["India", "Eropa", "China", "Arab"],
+          "jawaban": "Arab"
+        },
+        {
+          "soal": "Samudera Pasai berperan penting dalam penyebaran agama Islam di wilayah?",
+          "pilihan": ["Jawa", "Sumatera", "Kalimantan", "Papua"],
+          "jawaban": "Sumatera"
+        },
+        {
+          "soal": "Samudera Pasai kemudian jatuh ke tangan?",
+          "pilihan": ["Majapahit", "Aceh", "Portugis", "Sriwijaya"],
+          "jawaban": "Aceh"
+        },
+        {
+          "soal": "Kapan kira-kira Samudera Pasai mengalami masa kejayaan?",
+          "pilihan": ["Abad ke-10", "Abad ke-13", "Abad ke-15", "Abad ke-17"],
+          "jawaban": "Abad ke-13"
+        },
+        {
+          "soal": "Nama lain dari Kerajaan Samudera Pasai adalah?",
+          "pilihan": ["Peureulak", "Pasai", "Aceh Lama", "Darussalam"],
+          "jawaban": "Pasai"
+        },
+        {
+          "soal": "Kerajaan Samudera Pasai memiliki hubungan diplomatik dengan kerajaan di?",
+          "pilihan": ["Jepang", "Cina", "Arab", "Mongol"],
+          "jawaban": "Arab"
+        }
+      ]
+    },
+    "kerajaan_aceh_darussalam": {
+      "questions": [
+        {
+          "soal": "Siapa sultan yang paling terkenal dari Kesultanan Aceh Darussalam?",
+          "pilihan": ["Sultan Iskandar Muda", "Sultan Ageng Tirtayasa", "Sultan Hasanuddin", "Sultan Alauddin"],
+          "jawaban": "Sultan Iskandar Muda"
+        },
+        {
+          "soal": "Kapan Kesultanan Aceh mencapai puncak kejayaannya?",
+          "pilihan": ["Abad ke-14", "Abad ke-16", "Abad ke-17", "Abad ke-19"],
+          "jawaban": "Abad ke-17"
+        },
+        {
+          "soal": "Apa peran utama Aceh dalam jaringan perdagangan global pada masa kejayaannya?",
+          "pilihan": ["Penghasil rempah-rempah", "Pusat distribusi lada", "Pusat pengolahan hasil tambang", "Sentra industri kain"],
+          "jawaban": "Pusat distribusi lada"
+        },
+        {
+          "soal": "Aceh terkenal sebagai pusat pengembangan ______ pada abad ke-16 dan 17.",
+          "pilihan": ["Hukum adat", "Islam", "Budaya Jawa", "Bahasa Melayu"],
+          "jawaban": "Islam"
+        },
+        {
+          "soal": "Apa nama pelabuhan utama Aceh yang menjadi pusat perdagangan internasional?",
+          "pilihan": ["Pelabuhan Banten", "Pelabuhan Sunda Kelapa", "Pelabuhan Lamuri", "Pelabuhan Pasai"],
+          "jawaban": "Pelabuhan Lamuri"
+        },
+        {
+          "soal": "Siapakah ulama besar yang menulis kitab Bustanus Salatin di Aceh?",
+          "pilihan": ["Nuruddin ar-Raniri", "Hamzah Fansuri", "Syamsuddin al-Sumatrani", "Syekh Yusuf"],
+          "jawaban": "Nuruddin ar-Raniri"
+        },
+        {
+          "soal": "Kerajaan Aceh Darussalam merupakan musuh utama bangsa Eropa, terutama bangsa ______.",
+          "pilihan": ["Portugis", "Spanyol", "Inggris", "Belanda"],
+          "jawaban": "Portugis"
+        },
+        {
+          "soal": "Kesultanan Aceh mengadopsi sistem pemerintahan berbasis ______.",
+          "pilihan": ["Demokrasi", "Feodalisme", "Monarki Islam", "Republik"],
+          "jawaban": "Monarki Islam"
+        },
+        {
+          "soal": "Salah satu peninggalan budaya Aceh adalah ______.",
+          "pilihan": ["Masjid Raya Baiturrahman", "Candi Muaro Jambi", "Keraton Yogyakarta", "Taman Sari"],
+          "jawaban": "Masjid Raya Baiturrahman"
+        },
+        {
+          "soal": "Kesultanan Aceh Darussalam memiliki hubungan diplomatik dengan negara ______.",
+          "pilihan": ["China", "Turki Usmani", "Jepang", "India"],
+          "jawaban": "Turki Usmani"
+        },
+        {
+          "soal": "Apa faktor utama kejayaan ekonomi Aceh di masa lampau?",
+          "pilihan": ["Hasil tambang emas", "Lada dan rempah", "Pertanian padi", "Peternakan"],
+          "jawaban": "Lada dan rempah"
+        },
+        {
+          "soal": "Bagaimana Aceh memanfaatkan Islam dalam politik luar negerinya?",
+          "pilihan": ["Sebagai identitas budaya", "Untuk menandingi kekuatan Eropa", "Sebagai alat menyatukan rakyat", "Untuk memperkuat hubungan dengan kerajaan Islam lain"],
+          "jawaban": "Untuk memperkuat hubungan dengan kerajaan Islam lain"
+        },
+        {
+          "soal": "Kesultanan Aceh mengalami kemunduran karena ______.",
+          "pilihan": ["Penjajahan Belanda", "Perpecahan internal", "Bencana alam", "Kelaparan"],
+          "jawaban": "Penjajahan Belanda"
+        },
+        {
+          "soal": "Salah satu penyair sufi terkenal dari Aceh adalah ______.",
+          "pilihan": ["Hamzah Fansuri", "Nuruddin Ar-Raniri", "Ali Hanafiah", "Imam Bonjol"],
+          "jawaban": "Hamzah Fansuri"
+        },
+        {
+          "soal": "Apa bentuk interaksi Aceh dengan dunia luar yang paling kuat pada abad ke-17?",
+          "pilihan": ["Ekspedisi militer", "Pengiriman utusan diplomatik", "Penyebaran agama Kristen", "Migrasi massal"],
+          "jawaban": "Pengiriman utusan diplomatik"
+        }
+      ]
+    },
+    "kesultanan_deli": {
+      "questions": [
+        {
+          "soal": "Apa nama istana dari Kesultanan Deli?",
+          "pilihan": ["Istana Maimun", "Istana Tanjung Pura", "Istana Siak", "Istana Kuto Lamo"],
+          "jawaban": "Istana Maimun"
+        },
+        {
+          "soal": "Kesultanan Deli terkenal karena produksi komoditas apa?",
+          "pilihan": ["Tembakau Deli", "Kopi Gayo", "Lada Hitam", "Teh Deli"],
+          "jawaban": "Tembakau Deli"
+        },
+        {
+          "soal": "Dengan bangsa mana Kesultanan Deli menjalin hubungan dagang yang erat?",
+          "pilihan": ["Inggris", "Portugis", "Belanda", "Spanyol"],
+          "jawaban": "Belanda"
+        },
+        {
+          "soal": "Kesultanan Deli merupakan pecahan dari kesultanan mana?",
+          "pilihan": ["Serdang", "Langkat", "Aceh", "Siak"],
+          "jawaban": "Aceh"
+        },
+        {
+          "soal": "Apa nama pelabuhan utama yang digunakan Kesultanan Deli untuk ekspor tembakau?",
+          "pilihan": ["Belawan", "Tanjung Priok", "Dumai", "Pekanbaru"],
+          "jawaban": "Belawan"
+        },
+        {
+          "soal": "Salah satu warisan budaya Kesultanan Deli yang masih ada adalah ______.",
+          "pilihan": ["Istana Maimun", "Candi Muara Takus", "Benteng Kuto Besak", "Taman Sari"],
+          "jawaban": "Istana Maimun"
+        },
+        {
+          "soal": "Apa sistem pemerintahan utama dalam Kesultanan Deli?",
+          "pilihan": ["Monarki Islam", "Demokrasi", "Kerajaan adat", "Federasi suku"],
+          "jawaban": "Monarki Islam"
+        },
+        {
+          "soal": "Apa dampak utama dari hubungan Deli dengan Belanda?",
+          "pilihan": ["Ekonomi berkembang, tapi politik dijajah", "Militer Deli makin kuat", "Kemerdekaan semakin luas", "Budaya Eropa dihapuskan"],
+          "jawaban": "Ekonomi berkembang, tapi politik dijajah"
+        },
+        {
+          "soal": "Siapakah tokoh penting dalam pendirian Kesultanan Deli?",
+          "pilihan": ["Tuanku Panglima Gocah Pahlawan", "Sultan Iskandar Muda", "Sultan Abdul Jalil", "Tuanku Imam Bonjol"],
+          "jawaban": "Tuanku Panglima Gocah Pahlawan"
+        },
+        {
+          "soal": "Apa yang membuat tembakau Deli terkenal di pasar internasional?",
+          "pilihan": ["Kualitas daun dan aroma", "Harga murah", "Rasa pahit", "Pewarna alami"],
+          "jawaban": "Kualitas daun dan aroma"
+        },
+        {
+          "soal": "Apa latar belakang etnis dominan yang dibawa masuk untuk mengolah perkebunan tembakau?",
+          "pilihan": ["Tionghoa dan Jawa", "Minangkabau dan Batak", "Melayu dan Bugis", "Dayak dan Sunda"],
+          "jawaban": "Tionghoa dan Jawa"
+        },
+        {
+          "soal": "Istana Maimun menggabungkan unsur budaya berikut, KECUALI:",
+          "pilihan": ["Melayu", "Islam", "Italia", "Jepang"],
+          "jawaban": "Jepang"
+        },
+        {
+          "soal": "Bagaimana Kesultanan Deli menunjukkan kekayaannya kepada dunia luar?",
+          "pilihan": ["Arsitektur istana dan pakaian mewah", "Ekspedisi militer", "Pajangan senjata", "Festival perang"],
+          "jawaban": "Arsitektur istana dan pakaian mewah"
+        },
+        {
+          "soal": "Kesultanan Deli pernah berada di bawah pengaruh kolonial mana?",
+          "pilihan": ["Belanda", "Inggris", "Portugis", "Turki"],
+          "jawaban": "Belanda"
+        },
+        {
+          "soal": "Apa yang membuat Deli berbeda dengan kesultanan lain di Sumatra Timur?",
+          "pilihan": ["Basis ekonomi tembakau dan kemitraan asing", "Letaknya di pedalaman", "Menghindari hubungan internasional", "Melarang budaya asing"],
+          "jawaban": "Basis ekonomi tembakau dan kemitraan asing"
+        }
+      ]
+    },
+    "kesultanan_serdang": {
+      "questions": [
+        {
+          "soal": "Kesultanan Serdang merupakan pecahan dari kesultanan mana?",
+          "pilihan": ["Deli", "Langkat", "Aceh", "Siak"],
+          "jawaban": "Deli"
+        },
+        {
+          "soal": "Apa penyebab utama berdirinya Kesultanan Serdang?",
+          "pilihan": ["Konflik suksesi di Deli", "Penjajahan Belanda", "Perdagangan lada", "Invasi Aceh"],
+          "jawaban": "Konflik suksesi di Deli"
+        },
+        {
+          "soal": "Apa nama ibukota Kesultanan Serdang?",
+          "pilihan": ["Perbaungan", "Medan", "Tanjung Pura", "Pangkalan Brandan"],
+          "jawaban": "Perbaungan"
+        },
+        {
+          "soal": "Sistem pemerintahan di Kesultanan Serdang adalah?",
+          "pilihan": ["Monarki Islam", "Demokrasi", "Oligarki", "Kerajaan Hindu"],
+          "jawaban": "Monarki Islam"
+        },
+        {
+          "soal": "Kesultanan Serdang memiliki hubungan erat dengan bangsa?",
+          "pilihan": ["Belanda", "Spanyol", "Turki", "Arab"],
+          "jawaban": "Belanda"
+        },
+        {
+          "soal": "Sultan pertama dari Kesultanan Serdang adalah?",
+          "pilihan": ["Tuanku Sultan Serdang", "Tuanku Sultan Sulaiman", "Tuanku Sultan Basharuddin", "Tuanku Sultan Muda"],
+          "jawaban": "Tuanku Sultan Serdang"
+        },
+        {
+          "soal": "Apa komoditas utama yang dihasilkan oleh Kesultanan Serdang?",
+          "pilihan": ["Tembakau", "Karet", "Kopi", "Lada"],
+          "jawaban": "Tembakau"
+        },
+        {
+          "soal": "Kesultanan Serdang berkembang pada abad ke?",
+          "pilihan": ["19", "17", "15", "13"],
+          "jawaban": "19"
+        },
+        {
+          "soal": "Apa nama istana kerajaan Kesultanan Serdang?",
+          "pilihan": ["Istana Darul Arif", "Istana Maimun", "Istana Siak", "Istana Kuto Besak"],
+          "jawaban": "Istana Darul Arif"
+        },
+        {
+          "soal": "Wilayah kekuasaan Serdang terletak di provinsi mana sekarang?",
+          "pilihan": ["Sumatera Utara", "Aceh", "Riau", "Jambi"],
+          "jawaban": "Sumatera Utara"
+        },
+        {
+          "soal": "Apakah Kesultanan Serdang pernah mengalami pengaruh kolonial?",
+          "pilihan": ["Ya", "Tidak", "Sebagian", "Tidak diketahui"],
+          "jawaban": "Ya"
+        },
+        {
+          "soal": "Serdang menjadi terkenal karena kemitraan dagangnya dalam bidang?",
+          "pilihan": ["Perkebunan", "Perikanan", "Peternakan", "Kerajinan"],
+          "jawaban": "Perkebunan"
+        },
+        {
+          "soal": "Kesultanan Serdang merupakan hasil kompromi antara?",
+          "pilihan": ["Pewaris tahta dan penjajah Belanda", "Sultan Aceh dan Deli", "Masyarakat adat dan raja Bugis", "Pemerintah kolonial dan rakyat Minang"],
+          "jawaban": "Pewaris tahta dan penjajah Belanda"
+        },
+        {
+          "soal": "Bagaimana kondisi Kesultanan Serdang pada akhir abad ke-19?",
+          "pilihan": ["Makmur tapi di bawah pengaruh Belanda", "Sepenuhnya merdeka", "Terpecah menjadi tiga wilayah", "Diinvasi oleh Inggris"],
+          "jawaban": "Makmur tapi di bawah pengaruh Belanda"
+        },
+        {
+          "soal": "Apa warisan budaya Serdang yang masih ada sampai sekarang?",
+          "pilihan": ["Istana, tradisi Melayu, dan tari persembahan", "Candi dan relief Hindu", "Benteng dan meriam", "Manuskrip Buddhis"],
+          "jawaban": "Istana, tradisi Melayu, dan tari persembahan"
+        }
+      ]
+    },
+    "kesultanan_langkat": {
+      "questions": [
+        {
+          "soal": "Kesultanan Langkat berdiri pada tahun berapa?",
+          "pilihan": ["1869", "1769", "1669", "1969"],
+          "jawaban": "1869"
+        },
+        {
+          "soal": "Apa nama istana utama Kesultanan Langkat?",
+          "pilihan": ["Istana Tanjung Pura", "Istana Maimun", "Istana Siak", "Istana Darul Arif"],
+          "jawaban": "Istana Tanjung Pura"
+        },
+        {
+          "soal": "Kesultanan Langkat berlokasi di provinsi mana sekarang?",
+          "pilihan": ["Sumatera Utara", "Aceh", "Riau", "Jambi"],
+          "jawaban": "Sumatera Utara"
+        },
+        {
+          "soal": "Sumber ekonomi utama Kesultanan Langkat adalah?",
+          "pilihan": ["Perkebunan", "Perikanan", "Peternakan", "Pertambangan"],
+          "jawaban": "Perkebunan"
+        },
+        {
+          "soal": "Apa komoditas utama perkebunan Langkat pada masa kolonial?",
+          "pilihan": ["Tembakau", "Teh", "Kelapa sawit", "Cengkih"],
+          "jawaban": "Tembakau"
+        },
+        {
+          "soal": "Kesultanan Langkat menjalin hubungan erat dengan bangsa?",
+          "pilihan": ["Belanda", "Arab", "Cina", "India"],
+          "jawaban": "Belanda"
+        },
+        {
+          "soal": "Sistem pemerintahan di Kesultanan Langkat adalah?",
+          "pilihan": ["Monarki Islam", "Republik", "Demokrasi", "Monarki Hindu"],
+          "jawaban": "Monarki Islam"
+        },
+        {
+          "soal": "Nama lengkap Sultan pertama Langkat adalah?",
+          "pilihan": ["Sultan Musa", "Sultan Abdul Jalil", "Sultan Mahmud", "Sultan Mahmud Rahmat Syah"],
+          "jawaban": "Sultan Musa"
+        },
+        {
+          "soal": "Kesultanan Langkat memiliki pengaruh besar dalam bidang?",
+          "pilihan": ["Politik dan perdagangan", "Pertahanan", "Maritim", "Pertanian"],
+          "jawaban": "Politik dan perdagangan"
+        },
+        {
+          "soal": "Kesultanan Langkat berkembang pesat karena dukungan dari?",
+          "pilihan": ["Belanda", "Portugis", "Turki", "Spanyol"],
+          "jawaban": "Belanda"
+        },
+        {
+          "soal": "Siapakah penjajah utama yang berpengaruh di Langkat?",
+          "pilihan": ["Belanda", "Inggris", "Portugis", "Spanyol"],
+          "jawaban": "Belanda"
+        },
+        {
+          "soal": "Kesultanan Langkat pernah mengalami konflik dengan?",
+          "pilihan": ["Kesultanan Deli", "Kerajaan Aceh", "Belanda", "Masyarakat lokal"],
+          "jawaban": "Masyarakat lokal"
+        },
+        {
+          "soal": "Salah satu warisan budaya Langkat yang masih lestari adalah?",
+          "pilihan": ["Istana, seni tari Melayu, dan syair", "Candi dan prasasti", "Benteng dan meriam", "Naskah kuno Buddhis"],
+          "jawaban": "Istana, seni tari Melayu, dan syair"
+        },
+        {
+          "soal": "Kesultanan Langkat pernah menjadi bagian dari federasi?",
+          "pilihan": ["Kesultanan Deli", "Kesultanan Serdang", "Kesultanan Siak", "Tidak ada"],
+          "jawaban": "Tidak ada"
+        },
+        {
+          "soal": "Apa peran penting Langkat di masa penjajahan?",
+          "pilihan": ["Pusat tembakau dan mitra dagang Belanda", "Pelabuhan laut utama", "Kampung nelayan", "Pusat pertahanan laut"],
+          "jawaban": "Pusat tembakau dan mitra dagang Belanda"
+        }
+      ]
+    },
+    "kesultanan_siak_sri_indrapura": {
+      "questions": [
+        {
+          "soal": "Di mana letak Kesultanan Siak Sri Indrapura?",
+          "pilihan": ["Riau", "Sumatera Barat", "Sumatera Utara", "Aceh"],
+          "jawaban": "Riau"
+        },
+        {
+          "soal": "Siapakah pendiri Kesultanan Siak?",
+          "pilihan": ["Sultan Abdul Jalil Rahmat Syah", "Sultan Syarif Kasim II", "Sultan Iskandar Muda", "Sultan Mahmud Syah"],
+          "jawaban": "Sultan Abdul Jalil Rahmat Syah"
+        },
+        {
+          "soal": "Kesultanan Siak berdiri pada abad ke-?",
+          "pilihan": ["18", "17", "16", "15"],
+          "jawaban": "18"
+        },
+        {
+          "soal": "Apa nama istana megah peninggalan Kesultanan Siak?",
+          "pilihan": ["Istana Siak", "Istana Tanjung Pura", "Istana Maimun", "Istana Kuta Lama"],
+          "jawaban": "Istana Siak"
+        },
+        {
+          "soal": "Sultan terakhir Kesultanan Siak adalah?",
+          "pilihan": ["Sultan Syarif Kasim II", "Sultan Abdul Jalil", "Sultan Muhammad Ali", "Sultan Ismail"],
+          "jawaban": "Sultan Syarif Kasim II"
+        },
+        {
+          "soal": "Apa sikap Sultan Syarif Kasim II terhadap kemerdekaan Indonesia?",
+          "pilihan": ["Mendukung dan menyerahkan wilayahnya", "Menentang keras", "Netral", "Bergabung dengan Belanda"],
+          "jawaban": "Mendukung dan menyerahkan wilayahnya"
+        },
+        {
+          "soal": "Kesultanan Siak terkenal sebagai pusat perdagangan apa?",
+          "pilihan": ["Emas dan rempah-rempah", "Perak dan tekstil", "Kopi dan kapas", "Ikan dan garam"],
+          "jawaban": "Emas dan rempah-rempah"
+        },
+        {
+          "soal": "Kesultanan Siak pernah menjalin hubungan diplomatik dengan negara?",
+          "pilihan": ["Turki Utsmani", "India", "Portugal", "Jepang"],
+          "jawaban": "Turki Utsmani"
+        },
+        {
+          "soal": "Apa kontribusi utama Kesultanan Siak pada masa awal kemerdekaan?",
+          "pilihan": ["Menyerahkan kekuasaan kepada Republik Indonesia", "Mendirikan partai politik", "Memimpin perlawanan bersenjata", "Membangun benteng pertahanan"],
+          "jawaban": "Menyerahkan kekuasaan kepada Republik Indonesia"
+        },
+        {
+          "soal": "Apa nama alat musik khas Kesultanan Siak yang ada di istana?",
+          "pilihan": ["Komet", "Serunai", "Gendang", "Angklung"],
+          "jawaban": "Komet"
+        },
+        {
+          "soal": "Apa sistem pemerintahan yang dianut Kesultanan Siak?",
+          "pilihan": ["Monarki Islam", "Demokrasi Parlementer", "Oligarki", "Republik"],
+          "jawaban": "Monarki Islam"
+        },
+        {
+          "soal": "Siapa penerus Sultan Abdul Jalil Rahmat Syah dalam Kesultanan Siak?",
+          "pilihan": ["Sultan Mahmud Abdul Jalil", "Sultan Syarif Hasyim", "Sultan Syarif Kasim I", "Sultan Syarif Ali"],
+          "jawaban": "Sultan Syarif Kasim I"
+        },
+        {
+          "soal": "Apa yang menjadi dasar hukum Kesultanan Siak?",
+          "pilihan": ["Syariat Islam", "Hukum Belanda", "Hukum Adat saja", "Undang-Undang RI"],
+          "jawaban": "Syariat Islam"
+        },
+        {
+          "soal": "Kesultanan Siak mengalami kejayaan pada masa pemerintahan siapa?",
+          "pilihan": ["Sultan Syarif Kasim I", "Sultan Abdul Jalil", "Sultan Ali Jalla", "Sultan Mahmud Syah"],
+          "jawaban": "Sultan Syarif Kasim I"
+        },
+        {
+          "soal": "Siak Sri Indrapura adalah nama?",
+          "pilihan": ["Ibu kota kesultanan", "Benteng pertahanan", "Pelabuhan", "Nama Sultan"],
+          "jawaban": "Ibu kota kesultanan"
+        }
+      ]
+    },
+    "kesultanan_indragiri": {
+      "questions": [
+        {
+          "soal": "Kesultanan Indragiri terletak di provinsi mana saat ini?",
+          "pilihan": ["Riau", "Jambi", "Sumatera Utara", "Sumatera Selatan"],
+          "jawaban": "Riau"
+        },
+        {
+          "soal": "Kesultanan Indragiri berdiri pada abad ke-?",
+          "pilihan": ["13", "15", "14", "16"],
+          "jawaban": "13"
+        },
+        {
+          "soal": "Kesultanan Indragiri memiliki hubungan sejarah dengan kerajaan besar apa?",
+          "pilihan": ["Majapahit", "Sriwijaya", "Demak", "Mataram"],
+          "jawaban": "Majapahit"
+        },
+        {
+          "soal": "Pelabuhan utama Kesultanan Indragiri disebut?",
+          "pilihan": ["Kuala Indragiri", "Pelabuhan Deli", "Teluk Bayur", "Muara Takus"],
+          "jawaban": "Kuala Indragiri"
+        },
+        {
+          "soal": "Apa agama resmi Kesultanan Indragiri?",
+          "pilihan": ["Islam", "Hindu", "Buddha", "Katolik"],
+          "jawaban": "Islam"
+        },
+        {
+          "soal": "Sultan Indragiri pertama yang memeluk Islam bernama?",
+          "pilihan": ["Sultan Muhammad Syah", "Sultan Marhum", "Sultan Mahmud Syah", "Sultan Zainal Abidin"],
+          "jawaban": "Sultan Marhum"
+        },
+        {
+          "soal": "Apa bentuk sistem pemerintahan yang dianut oleh Kesultanan Indragiri?",
+          "pilihan": ["Monarki Islam", "Demokrasi", "Kesukuan", "Federasi"],
+          "jawaban": "Monarki Islam"
+        },
+        {
+          "soal": "Siapakah tokoh penting dari Indragiri yang dikenal mendukung kemerdekaan Indonesia?",
+          "pilihan": ["Sultan Mahmud Zainuddin", "Sultan Ismail", "Sultan Hasanuddin", "Sultan Syarif Hasyim"],
+          "jawaban": "Sultan Mahmud Zainuddin"
+        },
+        {
+          "soal": "Kesultanan Indragiri dikenal menjalin hubungan erat dengan?",
+          "pilihan": ["Kesultanan Malaka", "Kerajaan Siam", "Portugis", "Kesultanan Banten"],
+          "jawaban": "Kesultanan Malaka"
+        },
+        {
+          "soal": "Benteng pertahanan Kesultanan Indragiri dibangun untuk melawan?",
+          "pilihan": ["Penjajah Belanda", "Kerajaan Aceh", "Portugis", "Demak"],
+          "jawaban": "Penjajah Belanda"
+        },
+        {
+          "soal": "Sumber ekonomi utama Kesultanan Indragiri berasal dari?",
+          "pilihan": ["Perdagangan sungai", "Tambang emas", "Perdagangan rempah", "Pertanian padi"],
+          "jawaban": "Perdagangan sungai"
+        },
+        {
+          "soal": "Salah satu peninggalan arsitektur Kesultanan Indragiri adalah?",
+          "pilihan": ["Masjid Raya Indragiri", "Istana Siak", "Benteng Indrapura", "Candi Indragiri"],
+          "jawaban": "Masjid Raya Indragiri"
+        },
+        {
+          "soal": "Kesultanan Indragiri dipengaruhi oleh budaya?",
+          "pilihan": ["Melayu dan Islam", "Batak dan Hindu", "Minangkabau dan Buddha", "Jawa dan Kristen"],
+          "jawaban": "Melayu dan Islam"
+        },
+        {
+          "soal": "Kesultanan Indragiri menjadi bagian dari Hindia Belanda pada tahun?",
+          "pilihan": ["1904", "1858", "1899", "1920"],
+          "jawaban": "1904"
+        },
+        {
+          "soal": "Sistem pewarisan takhta Kesultanan Indragiri berdasarkan?",
+          "pilihan": ["Garis keturunan laki-laki", "Pemilihan rakyat", "Wasiat kerajaan", "Pemilihan bangsawan"],
+          "jawaban": "Garis keturunan laki-laki"
+        }
+      ]
+    }
+  },
+
+    "arcade": {
+      "true_false": [
+        {
+          "text": "Kerajaan Perlak adalah kerajaan Islam pertama di Indonesia.",
+          "correct": true
+        },
+        {
+          "text": "Kerajaan Perlak berdiri pada abad ke-15.",
+          "correct": false
+        },
+        {
+          "text": "Kerajaan Perlak memiliki dua aliran utama yaitu Sunni dan Syiah.",
+          "correct": true
+        },
+        {
+          "text": "Kerajaan Samudera Pasai terletak di Jawa Timur.",
+          "correct": false
+        },
+        {
+          "text": "Samudera Pasai dikenal sebagai pusat perdagangan dan penyebaran Islam.",
+          "correct": true
+        },
+        {
+          "text": "Mata uang emas yang digunakan di Samudera Pasai disebut dirham.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Aceh Darussalam berperan penting dalam melawan Portugis.",
+          "correct": true
+        },
+        {
+          "text": "Sultan Iskandar Muda adalah tokoh penting dari Kesultanan Aceh.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Aceh merupakan kerajaan Buddha terbesar di Sumatra.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Deli terkenal dengan hasil tembakau Deli.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Deli didirikan sebelum abad ke-17.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Serdang merupakan pecahan dari Kesultanan Deli.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Serdang memiliki pelabuhan utama di Teluk Bayur.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Langkat memiliki istana bernama Istana Tanjung Pura.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Langkat terletak di wilayah provinsi Riau saat ini.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Siak Sri Indrapura memiliki hubungan erat dengan Belanda.",
+          "correct": true
+        },
+        {
+          "text": "Sultan Syarif Kasim II adalah tokoh penting dari Kesultanan Siak.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Indragiri berdiri pada abad ke-13.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Indragiri tidak memiliki hubungan dengan kerajaan besar manapun.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Indragiri dipengaruhi oleh budaya Melayu dan Islam.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Jambi berkembang sebagai pusat perdagangan lada dan emas.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Jambi berdiri setelah Kesultanan Palembang runtuh.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Jambi menjalin hubungan diplomatik dengan VOC.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Palembang Darussalam terkenal dengan arsitektur masjid kayunya.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Palembang Darussalam didirikan oleh Sultan Agung Mataram.",
+          "correct": false
+        },
+        {
+          "text": "Kerajaan Perlak sempat diperintah oleh ratu perempuan.",
+          "correct": true
+        },
+        {
+          "text": "Kerajaan Samudera Pasai banyak menjalin hubungan dagang dengan Gujarat dan Arab.",
+          "correct": true
+        },
+        {
+          "text": "Sultan Malik Al Saleh adalah pendiri Kerajaan Samudera Pasai.",
+          "correct": true
+        },
+        {
+          "text": "Aceh Darussalam mencapai masa keemasan di bawah Sultan Ismail Marzuki.",
+          "correct": false
+        },
+        {
+          "text": "Aceh Darussalam memiliki hubungan dengan Kesultanan Utsmaniyah.",
+          "correct": true
+        },
+        {
+          "text": "Tembakau Deli merupakan komoditas ekspor utama Kesultanan Deli.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Deli terletak di pesisir barat Pulau Sumatra.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Serdang berdiri akibat konflik suksesi di Deli.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Langkat merupakan kerajaan Hindu terakhir di Sumatra.",
+          "correct": false
+        },
+        {
+          "text": "Istana Tanjung Pura merupakan simbol kekuasaan Kesultanan Langkat.",
+          "correct": true
+        },
+        {
+          "text": "Sultan Syarif Kasim II dari Siak menyerahkan kekuasaan kepada Indonesia.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Siak menolak kemerdekaan Indonesia tahun 1945.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Indragiri sempat menjadi bagian dari wilayah Kesultanan Siak.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Jambi berada di bawah pengaruh Kesultanan Malaka.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Palembang Darussalam memiliki pelabuhan strategis di Sungai Musi.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Indragiri berdiri sejak abad ke-13.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Indragiri menjalin hubungan dengan Majapahit dan Malaka.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Indragiri terletak di Kalimantan Timur.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Langkat terkenal akan hasil tambang emasnya.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Langkat berdiri pada tahun 1869.",
+          "correct": true
+        },
+        {
+          "text": "Kerajaan Samudera Pasai dikenal dengan mata uang emas bernama dirham.",
+          "correct": true
+        },
+        {
+          "text": "Sultan Malik Al-Tahir merupakan tokoh terkenal dari Kerajaan Samudera Pasai.",
+          "correct": true
+        },
+        {
+          "text": "Aceh Darussalam dikenal sebagai pusat studi Islam terbesar di Asia Tenggara pada masanya.",
+          "correct": true
+        },
+        {
+          "text": "Sultan Iskandar Muda merupakan sultan dari Kerajaan Siak Sri Indrapura.",
+          "correct": false
+        },
+        {
+          "text": "Tembakau Deli sangat diminati oleh bangsa Eropa.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Deli bekerja sama dengan kolonial Belanda dalam sektor perkebunan.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Serdang dikenal karena peran besarnya dalam penyebaran agama Hindu.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Serdang merupakan pecahan dari Kesultanan Deli.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Siak sempat berjaya pada masa pemerintahan Sultan Syarif Kasim I.",
+          "correct": true
+        },
+        {
+          "text": "Sultan Syarif Kasim I adalah pemimpin terakhir Kesultanan Siak.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Palembang Darussalam sempat diserang oleh VOC.",
+          "correct": true
+        },
+        {
+          "text": "Masjid Agung Palembang dibangun pada masa kolonial Inggris.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Jambi memiliki hubungan dagang yang aktif dengan Cina dan India.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Jambi tidak pernah terlibat dalam perlawanan terhadap penjajahan.",
+          "correct": false
+        },
+        {
+          "text": "Kerajaan Perlak memiliki dua golongan Islam besar: Syiah dan Sunni.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Jambi berdiri sejak abad ke-15.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Jambi tidak memiliki hubungan dengan Kesultanan Malaka.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Palembang Darussalam berperan penting dalam penyebaran Islam di Sumatera bagian selatan.",
+          "correct": true
+        },
+        {
+          "text": "Sultan Mahmud Badaruddin II adalah tokoh penting Kesultanan Palembang.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Palembang tidak memiliki istana.",
+          "correct": false
+        },
+        {
+          "text": "Kerajaan Aceh pernah menyerang Portugis di Malaka.",
+          "correct": true
+        },
+        {
+          "text": "Kerajaan Aceh tidak pernah menjalin hubungan diplomatik dengan negara Eropa.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Deli berdiri sebelum Kesultanan Serdang.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Siak didirikan pada abad ke-14.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Langkat memiliki Istana Tanjung Pura sebagai pusat pemerintahan.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Indragiri menjalin hubungan dengan Portugis.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Serdang berlokasi di Sumatera Timur.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Siak merupakan salah satu kerajaan Islam terkuat di Riau.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Samudera Pasai berperan dalam penyebaran Islam ke Malaka.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Samudera Pasai menggunakan bahasa Persia dalam perdagangan.",
+          "correct": false
+        },
+        {
+          "text": "Kerajaan Perlak dikenal karena memiliki pelabuhan dagang yang ramai.",
+          "correct": true
+        },
+        {
+          "text": "Kerajaan Perlak berdiri setelah masa kejayaan Majapahit.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Deli memiliki hubungan dagang yang kuat dengan Eropa.",
+          "correct": true
+        },
+        {
+          "text": "Kesultanan Jambi terletak di pesisir barat Sumatera.",
+          "correct": false
+        },
+        {
+          "text": "Kesultanan Palembang termasuk dalam wilayah pengaruh Islam di Nusantara.",
+          "correct": true
+        }
+      ],
+      "essay": [
+        {
+          "question": "Apa komoditas utama yang terkenal dari Kesultanan Deli?",
+          "answer": "Tembakau Deli"
+        },
+        {
+          "question": "Apa nama pelabuhan utama Kerajaan Samudera Pasai?",
+          "answer": "Pelabuhan Pasai"
+        },
+        {
+          "question": "Siapa sultan terkenal dari Kesultanan Siak yang menyerahkan kekuasaan ke Indonesia?",
+          "answer": "Syarif Kasim"
+        },
+        {
+          "question": "Apa nama istana utama Kesultanan Langkat?",
+          "answer": "Istana Langkat"
+        },
+        {
+          "question": "Apa sistem perdagangan utama yang digunakan Kesultanan Aceh?",
+          "answer": "Perdagangan Laut"
+        },
+        {
+          "question": "Apa yang menyebabkan konflik antara Deli dan Serdang?",
+          "answer": "Perebutan Takhta"
+        },
+        {
+          "question": "Apa nama kota pusat pemerintahan Kerajaan Perlak?",
+          "answer": "Peureulak"
+        },
+        {
+          "question": "Kesultanan Indragiri memiliki hubungan erat dengan kerajaan mana?",
+          "answer": "Majapahit"
+        },
+        {
+          "question": "Apa pusat kegiatan dakwah Islam di Samudera Pasai?",
+          "answer": "Pasai"
+        },
+        {
+          "question": "Kesultanan Siak menjalin hubungan diplomatik dengan negara mana?",
+          "answer": "Belanda"
+        },
+        {
+          "question": "Apa bentuk peninggalan penting dari Kerajaan Aceh?",
+          "answer": "Masjid Raya"
+        },
+        {
+          "question": "Apa gelar pemimpin di Kesultanan Serdang?",
+          "answer": "Sultan Serdang"
+        },
+        {
+          "question": "Apa ciri khas arsitektur Kesultanan Langkat?",
+          "answer": "Melayu Islam"
+        },
+        {
+          "question": "Apa nama suku utama di Kesultanan Siak?",
+          "answer": "Suku Melayu"
+        },
+        {
+          "question": "Apa peran utama Kesultanan Indragiri dalam perdagangan?",
+          "answer": "Transit Dagang"
+        },
+        {
+          "question": "Apa bentuk kontribusi Kesultanan Deli terhadap ekonomi kolonial?",
+          "answer": "Perkebunan Tembakau"
+        },
+        {
+          "question": "Kerajaan mana yang dikenal sebagai pelopor Islam di Asia Tenggara?",
+          "answer": "Perlak"
+        },
+        {
+          "question": "Apa faktor utama kemunduran Samudera Pasai?",
+          "answer": "Serangan Majapahit"
+        },
+        {
+          "question": "Apa jalur utama ekspor Kesultanan Aceh?",
+          "answer": "Selat Malaka"
+        },
+        {
+          "question": "Apa hubungan Kesultanan Serdang dengan Kesultanan Deli?",
+          "answer": "Pecahan Deli"
+        },
+        {
+          "question": "Apa yang menjadikan Siak kuat di masa Sultan Abdul Jalil?",
+          "answer": "Aliansi Dagang"
+        },
+        {
+          "question": "Apa peninggalan penting dari Kesultanan Indragiri?",
+          "answer": "Masjid Tua"
+        },
+        {
+          "question": "Apa sistem pewarisan takhta di Serdang?",
+          "answer": "Patrilineal"
+        },
+        {
+          "question": "Apa penyebab keruntuhan Aceh Darussalam?",
+          "answer": "Invasi Belanda"
+        },
+        {
+          "question": "Apa pengaruh Islam yang dibawa ke Samudera Pasai?",
+          "answer": "Hukum Syariah"
+        },
+        {
+          "question": "Apa nama sultan pertama di Kesultanan Langkat?",
+          "answer": "Sultan Musa"
+        },
+        {
+          "question": "Apa sumber kekayaan utama Kesultanan Siak?",
+          "answer": "Perdagangan Internasional"
+        },
+        {
+          "question": "Apa bukti hubungan Perlak dengan Arab?",
+          "answer": "Pernikahan Syed"
+        },
+        {
+          "question": "Apa kota penting selain Peureulak di Kerajaan Perlak?",
+          "answer": "Kuala Peureulak"
+        },
+        {
+          "question": "Apa jalur diplomatik yang ditempuh Kesultanan Siak?",
+          "answer": "Perjanjian Belanda"
+        }
+      ]
+    }
+  }
